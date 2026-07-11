@@ -50,6 +50,12 @@ PODCAST_IMAGE_URL = os.environ.get(
 )
 PODCAST_EMAIL = os.environ.get("PODCAST_EMAIL", "shunuehara888@gmail.com")
 
+# feed.xmlを新規作成する場合・既存ファイルを読み込む場合の両方で
+# itunes:プレフィックスのタグを正しくシリアライズできるよう、
+# モジュール読み込み時に必ず名前空間を登録しておく
+ITUNES_NS = "http://www.itunes.com/dtds/podcast-1.0.dtd"
+ET.register_namespace("itunes", ITUNES_NS)
+
 
 def upload_to_blob(pathname, file_path, content_type):
     """Vercel Blob REST APIでファイルをアップロードし、公開URLを返す"""
@@ -76,25 +82,34 @@ def upload_episode(date_str, episode_path):
     return upload_to_blob(pathname, episode_path, "audio/mpeg")
 
 
+def _itag(name):
+    """itunes:接頭辞つきタグの完全修飾名を返す。
+    ET.parse()で既存feed.xmlを読み込んだ場合、既存のitunes:*要素は
+    '{namespace-uri}name' という完全修飾タグ名に解決される。新規追加する
+    要素も同じ完全修飾名で作らないと、シリアライズ時にprefixが
+    正しく対応付けられず 'unbound prefix' エラーになる。
+    """
+    return f"{{{ITUNES_NS}}}{name}"
+
+
 def add_required_channel_tags(channel, channel_link):
     """Spotify for Podcasters登録に必要なitunes:image / itunes:owner / itunes:category等を追加"""
-    ET.SubElement(channel, "itunes:image", {"href": PODCAST_IMAGE_URL})
+    ET.SubElement(channel, _itag("image"), {"href": PODCAST_IMAGE_URL})
     image = ET.SubElement(channel, "image")
     ET.SubElement(image, "url").text = PODCAST_IMAGE_URL
     ET.SubElement(image, "title").text = PODCAST_TITLE
     ET.SubElement(image, "link").text = channel_link
-    owner = ET.SubElement(channel, "itunes:owner")
-    ET.SubElement(owner, "itunes:name").text = PODCAST_AUTHOR
-    ET.SubElement(owner, "itunes:email").text = PODCAST_EMAIL
-    ET.SubElement(channel, "itunes:explicit").text = "false"
-    ET.SubElement(channel, "itunes:category", {"text": "Leisure"})
+    owner = ET.SubElement(channel, _itag("owner"))
+    ET.SubElement(owner, _itag("name")).text = PODCAST_AUTHOR
+    ET.SubElement(owner, _itag("email")).text = PODCAST_EMAIL
+    ET.SubElement(channel, _itag("explicit")).text = "false"
+    ET.SubElement(channel, _itag("category"), {"text": "Leisure"})
 
 
 def ensure_required_channel_tags(tree, channel_link):
     """既存feed.xmlに必須タグが無い場合(初回移行時など)は追加で補う"""
     channel = tree.getroot().find("channel")
-    ITUNES_NS = "{http://www.itunes.com/dtds/podcast-1.0.dtd}"
-    if channel.find(f"{ITUNES_NS}image") is None:
+    if channel.find(_itag("image")) is None:
         add_required_channel_tags(channel, channel_link)
 
 
@@ -103,14 +118,12 @@ def load_or_create_feed(channel_link):
         tree = ET.parse(FEED_PATH)
         ensure_required_channel_tags(tree, channel_link)
         return tree
-    NSMAP = {"itunes": "http://www.itunes.com/dtds/podcast-1.0.dtd"}
-    ET.register_namespace("itunes", NSMAP["itunes"])
-    rss = ET.Element("rss", {"version": "2.0", "xmlns:itunes": NSMAP["itunes"]})
+    rss = ET.Element("rss", {"version": "2.0"})
     channel = ET.SubElement(rss, "channel")
     ET.SubElement(channel, "title").text = PODCAST_TITLE
     ET.SubElement(channel, "description").text = PODCAST_DESCRIPTION
     ET.SubElement(channel, "language").text = "ja"
-    ET.SubElement(channel, "itunes:author").text = PODCAST_AUTHOR
+    ET.SubElement(channel, _itag("author")).text = PODCAST_AUTHOR
     ET.SubElement(channel, "link").text = channel_link
     add_required_channel_tags(channel, channel_link)
     return ET.ElementTree(rss)
