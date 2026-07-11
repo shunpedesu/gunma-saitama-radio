@@ -160,7 +160,14 @@ def main():
 
     with open(script_path, encoding="utf-8") as f:
         script = json.load(f)
-    title = f"{script['station_name']} {date_str[:4]}/{date_str[4:6]}/{date_str[6:]}"
+    date_disp = f"{date_str[:4]}/{date_str[4:6]}/{date_str[6:]}"
+    episode_title = script.get("episode_title", "").strip()
+    if episode_title:
+        # AIが考えたキャッチーなタイトル + 番組名/日付を併記
+        title = f"{episode_title}【{script['station_name']} {date_disp}】"
+    else:
+        # タイトル生成に失敗した場合の日付ベースのフォールバック
+        title = f"{script['station_name']} {date_disp}"
     summary = " / ".join(line["text"] for line in script["lines"][:2])
 
     audio_url = upload_episode(date_str, episode_path)
