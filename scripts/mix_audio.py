@@ -1,4 +1,4 @@
-scripts/mix_audio.py"""
+"""
 音声ミックススクリプト
 voice_YYYYMMDD.wav に イントロ/アウトロジングル・BGMを ffmpeg で合成し、
 最終的な mp3 (episode_YYYYMMDD.mp3) を出力する。
