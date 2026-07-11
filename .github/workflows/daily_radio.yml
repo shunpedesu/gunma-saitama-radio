@@ -6,6 +6,9 @@ on:
     - cron: "0 22 * * *"
   workflow_dispatch: {}   # 手動実行ボタンも使えるように
 
+permissions:
+  contents: write
+
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
