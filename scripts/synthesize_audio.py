@@ -1,4 +1,4 @@
-scripts/synthesize_audio.py"""
+"""
 TTS(VOICEVOX)音声合成スクリプト
 out/script_YYYYMMDD.json を読み込み、話者ごとにVOICEVOX engineへ投げて
 セリフごとのwavを生成し、1本のwavに連結する。
