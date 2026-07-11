@@ -1,54 +1,117 @@
 <?xml version="1.0" ?>
-<rss xmlns:ns0="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+  
+  
   
   
   <channel>
     
     
+    
+    
     <title>ラジオ・グンマサイタマ</title>
+    
+    
     
     
     <description>群馬・埼玉のローカルネタを毎日お届けするAIラジオ番組</description>
     
     
+    
+    
     <language>ja</language>
     
     
-    <ns0:author>チームグンマサイタマゲーム</ns0:author>
+    
+    
+    <itunes:author>チームグンマサイタマゲーム</itunes:author>
+    
+    
     
     
     <link>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes</link>
     
     
+    
+    
     <item>
       <title>ラジオ・グンマサイタマ 2026/07/11</title>
-      <description>こんばんは！ローカルラジオ『ラジオ・グンマサイタマ』へようこそ！メイン進行のからっ風太郎です。 / そしてツッコミ担当のねぎ坊主です。よろしくお願いします。</description>
-      <pubDate>Sat, 11 Jul 2026 05:19:36 +0000</pubDate>
+      <description>こんばんは、ラジオ・グンマサイタマのからっ風太郎です。相方のねぎ坊主です。 / ねぎ坊主だよ。いつも元気にツッコんでます。</description>
+      <pubDate>Sat, 11 Jul 2026 08:13:02 +0000</pubDate>
       <guid>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3</guid>
-      <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3" length="5135926" type="audio/mpeg"/>
+      <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3" length="4782751" type="audio/mpeg"/>
     </item>
     <item>
       
       
       <title>ラジオ・グンマサイタマ 2026/07/11</title>
+      
+      
+      <description>こんばんは！ローカルラジオ『ラジオ・グンマサイタマ』へようこそ！メイン進行のからっ風太郎です。 / そしてツッコミ担当のねぎ坊主です。よろしくお願いします。</description>
+      
+      
+      <pubDate>Sat, 11 Jul 2026 05:19:36 +0000</pubDate>
+      
+      
+      <guid>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3</guid>
+      
+      
+      <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3" length="5135926" type="audio/mpeg"/>
+      
+    
+    </item>
+    
+    
+    <item>
+      
+      
+      
+      
+      <title>ラジオ・グンマサイタマ 2026/07/11</title>
+      
+      
       
       
       <description>はい、こんばんは！ローカルラジオ番組『ラジオ・グンマサイタマ』の時間がやってまいりました。進行のからっ風太郎です。 / 相方のなまずちゃんです。本日も2時間よろしくお願いします。</description>
       
       
+      
+      
       <pubDate>Sat, 11 Jul 2026 04:52:44 +0000</pubDate>
+      
+      
       
       
       <guid>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3</guid>
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3" length="5291407" type="audio/mpeg"/>
       
+      
+    
     
     </item>
     
+    
   
+  
+    <itunes:image href="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/cover.png"/>
+    <image>
+      <url>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/cover.png</url>
+      <title>ラジオ・グンマサイタマ</title>
+      <link>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes</link>
+    </image>
+    <itunes:owner>
+      <itunes:name>チームグンマサイタマゲーム</itunes:name>
+      <itunes:email>shunuehara888@gmail.com</itunes:email>
+    </itunes:owner>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:category text="Leisure"/>
   </channel>
   
+  
+
 
 </rss>
