@@ -73,6 +73,9 @@ def main():
     speaker_map = load_speaker_map()
     wav_chunks = []
     for i, line in enumerate(script["lines"]):
+        if not isinstance(line, dict) or "speaker" not in line:
+            print(f"[WARN] malformed line {i}, skipping: {line!r}")
+            continue
         speaker_id = speaker_map.get(line["speaker"])
         if speaker_id is None:
             print(f"[WARN] unknown speaker '{line['speaker']}', skipping line {i}")
