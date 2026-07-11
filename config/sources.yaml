@@ -1,0 +1,26 @@
+# ニュースソース設定
+# 実際のRSS URLは各サイトの「RSS配信について」ページで最新のものを確認して差し替えてください。
+# - 群馬県: https://www.pref.gunma.jp/site/houdou/
+# - 埼玉県: https://www.pref.saitama.lg.jp/kense/koho/homepage/rss.html
+sources:
+  - name: 群馬県 報道提供資料
+    url: "https://www.pref.gunma.jp/site/houdou/rss.xml"
+    prefecture: gunma
+  - name: 埼玉県 県政ニュース
+    url: "https://www.pref.saitama.lg.jp/rss/news.xml"
+    prefecture: saitama
+
+# 台本生成の口調・世界観設定
+persona:
+  station_name: "ラジオ・グンマサイタマ"
+  hosts:
+    - name: からっ風太郎
+      voicevox_speaker_id: 3   # 実際のIDはVOICEVOX speakers APIで確認して差し替え
+      role: メイン進行(ボケ・群馬推し)
+    - name: なまずちゃん
+      voicevox_speaker_id: 2
+      role: 相方(ツッコミ・埼玉推し)
+  tone: |
+    群馬・埼玉のローカルネタや方言、あるあるネタを交えた
+    ゆるいラジオ番組。ニュースを紹介しつつ2人で掛け合いをする。
+    1本あたり3〜5分程度の尺になる分量で台本を書く。
