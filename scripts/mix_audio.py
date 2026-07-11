@@ -49,16 +49,17 @@ def main():
     )
 
     # 2. イントロ + 本編(BGM入り) + アウトロ を結合してmp3化
-    concat_list = OUT_DIR / f"concat_{date_str}.txt"
-    with open(concat_list, "w") as f:
-        f.write(f"file '{intro.resolve()}'\n")
-        f.write(f"file '{body_with_bgm.resolve()}'\n")
-        f.write(f"file '{outro.resolve()}'\n")
-
+    # 注意: concat demuxer(-f concat)はmp3とwavなど形式の異なるファイルを混在させると
+    # デコードエラーで音声が欠落することがあるため、filter_complexのconcatフィルタで
+    # 各入力を正しくデコードしてから結合する
     run(
         [
             "ffmpeg", "-y",
-            "-f", "concat", "-safe", "0", "-i", str(concat_list),
+            "-i", str(intro),
+            "-i", str(body_with_bgm),
+            "-i", str(outro),
+            "-filter_complex", "[0:a][1:a][2:a]concat=n=3:v=0:a=1[out]",
+            "-map", "[out]",
             "-c:a", "libmp3lame", "-b:a", "128k",
             str(episode_path),
         ]
