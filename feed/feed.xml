@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+  <channel>
+    <title>ラジオ・グンマサイタマ</title>
+    <description>群馬・埼玉のローカルネタを毎日お届けするAIラジオ番組</description>
+    <language>ja</language>
+    <itunes:author>チームグンマサイタマゲーム</itunes:author>
+    <link>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes</link>
+    <item>
+      <title>ラジオ・グンマサイタマ 2026/07/11</title>
+      <description>はい、こんばんは！ローカルラジオ番組『ラジオ・グンマサイタマ』の時間がやってまいりました。進行のからっ風太郎です。 / 相方のなまずちゃんです。本日も2時間よろしくお願いします。</description>
+      <pubDate>Sat, 11 Jul 2026 04:52:44 +0000</pubDate>
+      <guid>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3</guid>
+      <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3" length="5291407" type="audio/mpeg"/>
+    </item>
+  </channel>
+</rss>
