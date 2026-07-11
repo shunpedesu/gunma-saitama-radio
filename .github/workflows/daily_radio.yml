@@ -1,0 +1,54 @@
+name: Daily Gunma-Saitama Radio
+
+on:
+  schedule:
+    # 毎日 JST 7:00 に実行 (UTC 22:00 前日)
+    - cron: "0 22 * * *"
+  workflow_dispatch: {}   # 手動実行ボタンも使えるように
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    services:
+      voicevox:
+        image: voicevox/voicevox_engine:cpu-latest
+        ports:
+          - 50021:50021
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Install Python deps
+        run: pip install -r requirements.txt
+
+      - name: Wait for VOICEVOX engine
+        run: |
+          for i in $(seq 1 30); do
+            if curl -sf http://127.0.0.1:50021/version; then exit 0; fi
+            sleep 2
+          done
+          echo "VOICEVOX engine did not start" && exit 1
+
+      - name: Run pipeline
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
+        run: python scripts/run_pipeline.py
+
+      - name: Commit feed.xml
+        run: |
+          git config user.name "radio-bot"
+          git config user.email "radio-bot@users.noreply.github.com"
+          git add feed/feed.xml
+          git commit -m "Update feed.xml $(date +%F)" || echo "no changes"
+          git push
