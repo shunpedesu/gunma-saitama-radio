@@ -2,12 +2,21 @@
 # 実際のRSS URLは各サイトの「RSS配信について」ページで最新のものを確認して差し替えてください。
 # - 群馬県: https://www.pref.gunma.jp/site/houdou/
 # - 埼玉県: https://www.pref.saitama.lg.jp/kense/koho/homepage/rss.html
+# - 上毛新聞・埼玉新聞など地域紙は公式RSSを公開していないため、
+#   Google Newsのキーワード検索RSS(news.google.com/rss/search)経由で
+#   上毛新聞・埼玉新聞を含む各種ニュースサイトの記事を横断的に取得する。
 sources:
   - name: 群馬県 報道提供資料
     url: "https://www.pref.gunma.jp/site/houdou/rss.xml"
     prefecture: gunma
   - name: 埼玉県 県政ニュース
     url: "https://www.pref.saitama.lg.jp/rss/news.xml"
+    prefecture: saitama
+  - name: Google News「群馬」(上毛新聞など地域紙を含む)
+    url: "https://news.google.com/rss/search?q=%E7%BE%A4%E9%A6%AC&hl=ja&gl=JP&ceid=JP:ja"
+    prefecture: gunma
+  - name: Google News「埼玉」(埼玉新聞など地域紙を含む)
+    url: "https://news.google.com/rss/search?q=%E5%9F%BC%E7%8E%89&hl=ja&gl=JP&ceid=JP:ja"
     prefecture: saitama
 
 # 台本生成の口調・世界観設定
@@ -17,7 +26,7 @@ persona:
     - name: からっ風太郎
       voicevox_speaker_id: 3   # 実際のIDはVOICEVOX speakers APIで確認して差し替え
       role: メイン進行(ボケ・群馬推し)
-    - name: なまずちゃん
+    - name: ねぎ坊主
       voicevox_speaker_id: 2
       role: 相方(ツッコミ・埼玉推し)
   tone: |
