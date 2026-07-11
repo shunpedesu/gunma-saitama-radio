@@ -103,10 +103,11 @@ SCRIPT_TOOL = {
     },
 }
 
+MAX_LINES = 120  # 暴走生成のセーフガード(想定は40〜60セリフ程度)
 
-def generate_script(news_items, persona):
+
+def _call_claude(prompt):
     client = Anthropic()  # ANTHROPIC_API_KEY を環境変数から読む
-    prompt = build_prompt(news_items, persona)
     resp = client.messages.create(
         model="claude-haiku-4-5-20251001",
         max_tokens=4000,
@@ -116,8 +117,38 @@ def generate_script(news_items, persona):
     )
     for block in resp.content:
         if block.type == "tool_use" and block.name == "submit_script":
-            return block.input["lines"]
+            return block.input.get("lines", [])
     raise RuntimeError("submit_script tool_use block not found in response")
+
+
+def _valid_lines(lines):
+    """{"speaker": str, "text": str} 形式以外の要素(モデルの暴走出力)を除外する"""
+    valid = [
+        line
+        for line in lines
+        if isinstance(line, dict)
+        and isinstance(line.get("speaker"), str)
+        and isinstance(line.get("text"), str)
+        and line["speaker"]
+        and line["text"]
+    ]
+    return valid[:MAX_LINES]
+
+
+def generate_script(news_items, persona):
+    prompt = build_prompt(news_items, persona)
+    # モデルが極端に長い/壊れた出力を返すことが稀にあるため、
+    # 有効なセリフ数が少なすぎる場合は1回だけ再試行する
+    for attempt in range(2):
+        lines = _call_claude(prompt)
+        valid = _valid_lines(lines)
+        if len(valid) >= 10:
+            return valid
+        print(
+            f"[WARN] generated script looked malformed "
+            f"(raw={len(lines)} valid={len(valid)}), retrying..."
+        )
+    raise RuntimeError("failed to generate a valid script after retry")
 
 
 def main():
