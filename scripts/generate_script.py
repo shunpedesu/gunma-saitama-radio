@@ -72,15 +72,36 @@ def build_prompt(news_items, persona):
 # 本日のニュース候補
 {news_block}
 
-# 出力形式
-以下のJSON配列「のみ」を出力してください（説明文や```は不要）。
-[
-  {{"speaker": "{hosts[0]['name']}", "text": "セリフ"}},
-  {{"speaker": "{hosts[1]['name']}", "text": "セリフ"}}
-]
+# 出力について
+submit_script ツールを使って台本(セリフの配列)を提出してください。
 オープニング挨拶→ニュース紹介・掛け合い→ローカルあるあるトーク→エンディングの流れで、
 全体で40〜60セリフ程度、読み上げて3〜5分になる分量にしてください。
+セリフ内で英数字の二重引用符(")は使わないでください。
 """
+
+
+# Anthropicのtool useで構造化出力させることで、JSON解析エラーを避ける
+SCRIPT_TOOL = {
+    "name": "submit_script",
+    "description": "ラジオ台本のセリフ配列を提出する",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "lines": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "speaker": {"type": "string"},
+                        "text": {"type": "string"},
+                    },
+                    "required": ["speaker", "text"],
+                },
+            }
+        },
+        "required": ["lines"],
+    },
+}
 
 
 def generate_script(news_items, persona):
@@ -89,17 +110,14 @@ def generate_script(news_items, persona):
     resp = client.messages.create(
         model="claude-haiku-4-5-20251001",
         max_tokens=4000,
+        tools=[SCRIPT_TOOL],
+        tool_choice={"type": "tool", "name": "submit_script"},
         messages=[{"role": "user", "content": prompt}],
     )
-    text = resp.content[0].text.strip()
-    # ```json ... ``` で囲まれて返ってきた場合の保険
-    if text.startswith("```"):
-        text = text.strip("`")
-        text = text.split("\n", 1)[1] if "\n" in text else text
-        if text.endswith("json"):
-            text = text[: -4]
-    lines = json.loads(text)
-    return lines
+    for block in resp.content:
+        if block.type == "tool_use" and block.name == "submit_script":
+            return block.input["lines"]
+    raise RuntimeError("submit_script tool_use block not found in response")
 
 
 def main():
