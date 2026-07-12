@@ -6,7 +6,11 @@
   
   
   
+  
+  
   <channel>
+    
+    
     
     
     
@@ -20,7 +24,11 @@
     
     
     
+    
+    
     <description>群馬・埼玉のローカルネタを毎日お届けするAIラジオ番組</description>
+    
+    
     
     
     
@@ -34,7 +42,11 @@
     
     
     
+    
+    
     <itunes:author>チームグンマサイタマゲーム</itunes:author>
+    
+    
     
     
     
@@ -48,32 +60,69 @@
     
     
     
+    
+    
     <item>
-      <title>夏祭りと球児たちの熱戦【ラジオ・グンマサイタマ 2026/07/11】</title>
-      <description>こんばんは！ラジオ・グンマサイタマのからっ風太郎です / 相方のねぎ坊主です。2026年7月11日の放送をお送りします</description>
-      <pubDate>Sat, 11 Jul 2026 22:51:57 +0000</pubDate>
-      <guid>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3</guid>
-      <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3" length="4811590" type="audio/mpeg"/>
+      <title>七夕まつり＆群馬パスポートの奪い合い戦争【ラジオ・グンマサイタマ 2026/07/12】</title>
+      <description>どうも、からっ風太郎です。 / 相方のねぎ坊主です。</description>
+      <pubDate>Sun, 12 Jul 2026 22:52:09 +0000</pubDate>
+      <guid>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260712.mp3</guid>
+      <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260712.mp3" length="4106493" type="audio/mpeg"/>
     </item>
     <item>
       
       
+      <title>夏祭りと球児たちの熱戦【ラジオ・グンマサイタマ 2026/07/11】</title>
+      
+      
+      <description>こんばんは！ラジオ・グンマサイタマのからっ風太郎です / 相方のねぎ坊主です。2026年7月11日の放送をお送りします</description>
+      
+      
+      <pubDate>Sat, 11 Jul 2026 22:51:57 +0000</pubDate>
+      
+      
+      <guid>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3</guid>
+      
+      
+      <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3" length="4811590" type="audio/mpeg"/>
+      
+    
+    </item>
+    
+    
+    <item>
+      
+      
+      
+      
       <title>ラジオ・グンマサイタマ 2026/07/11</title>
+      
+      
       
       
       <description>こんばんは、ラジオ・グンマサイタマのからっ風太郎です。相方のねぎ坊主です。 / ねぎ坊主だよ。いつも元気にツッコんでます。</description>
       
       
+      
+      
       <pubDate>Sat, 11 Jul 2026 08:13:02 +0000</pubDate>
+      
+      
       
       
       <guid>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3</guid>
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3" length="4782751" type="audio/mpeg"/>
       
+      
+    
     
     </item>
+    
+    
     
     
     <item>
@@ -81,7 +130,11 @@
       
       
       
+      
+      
       <title>ラジオ・グンマサイタマ 2026/07/11</title>
+      
+      
       
       
       
@@ -91,7 +144,11 @@
       
       
       
+      
+      
       <pubDate>Sat, 11 Jul 2026 05:19:36 +0000</pubDate>
+      
+      
       
       
       
@@ -101,12 +158,18 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3" length="5135926" type="audio/mpeg"/>
       
       
+      
+    
     
     
     </item>
+    
+    
     
     
     
@@ -118,7 +181,11 @@
       
       
       
+      
+      
       <title>ラジオ・グンマサイタマ 2026/07/11</title>
+      
+      
       
       
       
@@ -132,7 +199,11 @@
       
       
       
+      
+      
       <pubDate>Sat, 11 Jul 2026 04:52:44 +0000</pubDate>
+      
+      
       
       
       
@@ -146,10 +217,14 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3" length="5291407" type="audio/mpeg"/>
       
       
       
+      
+    
     
     
     
@@ -157,49 +232,77 @@
     
     
     
+    
   
   
     
+    
     <itunes:image href="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/cover.png"/>
+    
+    
     
     
     <image>
       
       
+      
+      
       <url>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/cover.png</url>
+      
+      
       
       
       <title>ラジオ・グンマサイタマ</title>
       
       
+      
+      
       <link>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes</link>
       
+      
+    
     
     </image>
+    
+    
     
     
     <itunes:owner>
       
       
+      
+      
       <itunes:name>チームグンマサイタマゲーム</itunes:name>
+      
+      
       
       
       <itunes:email>shunuehara888@gmail.com</itunes:email>
       
+      
+    
     
     </itunes:owner>
+    
+    
     
     
     <itunes:explicit>false</itunes:explicit>
     
     
+    
+    
     <itunes:category text="Leisure"/>
     
+    
+  
   
   </channel>
   
   
   
+  
+
 
 
 
