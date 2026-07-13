@@ -39,9 +39,14 @@ FEED_PATH = FEED_DIR / "feed.xml"
 BLOB_API_BASE = "https://blob.vercel-storage.com"
 BLOB_TOKEN = os.environ["BLOB_READ_WRITE_TOKEN"]
 
+SOURCE_REPO_URL = "https://github.com/shunpedesu/gunma-saitama-radio"
+
 PODCAST_TITLE = os.environ.get("PODCAST_TITLE", "ラジオ・グンマサイタマ")
 PODCAST_DESCRIPTION = os.environ.get(
-    "PODCAST_DESCRIPTION", "群馬・埼玉のローカルネタを毎日お届けするAIラジオ番組"
+    "PODCAST_DESCRIPTION",
+    "群馬・埼玉のローカルネタを毎日お届けするAIラジオ番組。台本・音声はすべてAI"
+    "(Claude + VOICEVOX)が自動生成しています。"
+    f"制作の裏側やソースコードはこちら: {SOURCE_REPO_URL}",
 )
 PODCAST_AUTHOR = os.environ.get("PODCAST_AUTHOR", "チームグンマサイタマゲーム")
 # Spotify for Podcasters登録に必須: カバーアート画像URL・オーナーメールアドレス
@@ -113,10 +118,23 @@ def ensure_required_channel_tags(tree, channel_link):
         add_required_channel_tags(channel, channel_link)
 
 
+def sync_channel_description(channel):
+    """<description>を毎回PODCAST_DESCRIPTIONの現在値で上書きする。
+    文言を変更した際に既存feed.xmlにも反映されるようにするため、
+    新規作成時だけでなく既存feed.xml読み込み時にも呼び出す。
+    """
+    desc = channel.find("description")
+    if desc is None:
+        desc = ET.SubElement(channel, "description")
+    desc.text = PODCAST_DESCRIPTION
+
+
 def load_or_create_feed(channel_link):
     if FEED_PATH.exists():
         tree = ET.parse(FEED_PATH)
+        channel = tree.getroot().find("channel")
         ensure_required_channel_tags(tree, channel_link)
+        sync_channel_description(channel)
         return tree
     rss = ET.Element("rss", {"version": "2.0"})
     channel = ET.SubElement(rss, "channel")
