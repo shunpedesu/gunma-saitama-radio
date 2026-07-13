@@ -82,6 +82,12 @@ episode_title には、今日扱うニュースや話題を踏まえた、Podcas
 目を引くキャッチーなエピソードタイトルを1つ考えてください(12〜20文字程度)。
 番組名(「{persona['station_name']}」)や日付は含めず、その日の内容が一目で
 伝わる見出しにしてください。例:「からっ風とB級グルメ祭りの夜」
+
+episode_summary には、その回の内容をリスナーに紹介する概要文を
+約200字(180〜220字)で書いてください。番組名や日付は含めず、その日扱う
+話題・ニュースの見どころと、2人の掛け合いの雰囲気が伝わるようにします。
+番組全体の説明ではなく、フォロワーがこの1話を聴きたくなる「今日の回」の
+紹介文です。セリフ内と同様、英数字の二重引用符(")は使わないでください。
 """
 
 
@@ -96,6 +102,10 @@ SCRIPT_TOOL = {
                 "type": "string",
                 "description": "今日の放送内容を踏まえたキャッチーなエピソードタイトル(12〜20文字程度、番組名や日付は含めない)",
             },
+            "episode_summary": {
+                "type": "string",
+                "description": "その回の内容を紹介する約200字(180〜220字)の概要文。番組名や日付は含めない。今日の話題の見どころと2人の掛け合いの雰囲気が伝わる、この1話を聴きたくなる紹介文にする。",
+            },
             "lines": {
                 "type": "array",
                 "items": {
@@ -108,7 +118,7 @@ SCRIPT_TOOL = {
                 },
             },
         },
-        "required": ["episode_title", "lines"],
+        "required": ["episode_title", "episode_summary", "lines"],
     },
 }
 
@@ -126,7 +136,11 @@ def _call_claude(prompt):
     )
     for block in resp.content:
         if block.type == "tool_use" and block.name == "submit_script":
-            return block.input.get("episode_title", ""), block.input.get("lines", [])
+            return (
+                block.input.get("episode_title", ""),
+                block.input.get("episode_summary", ""),
+                block.input.get("lines", []),
+            )
     raise RuntimeError("submit_script tool_use block not found in response")
 
 
@@ -149,12 +163,14 @@ def generate_script(news_items, persona):
     # モデルが極端に長い/壊れた出力を返すことが稀にあるため、
     # 有効なセリフ数が少なすぎる場合は1回だけ再試行する
     for attempt in range(2):
-        episode_title, lines = _call_claude(prompt)
+        episode_title, episode_summary, lines = _call_claude(prompt)
         valid = _valid_lines(lines)
         if len(valid) >= 10:
             if not isinstance(episode_title, str) or not episode_title.strip():
                 episode_title = ""  # publish.py側で日付ベースのタイトルにフォールバック
-            return episode_title.strip(), valid
+            if not isinstance(episode_summary, str):
+                episode_summary = ""  # publish.py側でセリフ先頭のフォールバックに切替
+            return episode_title.strip(), episode_summary.strip(), valid
         print(
             f"[WARN] generated script looked malformed "
             f"(raw={len(lines)} valid={len(valid)}), retrying..."
@@ -165,7 +181,7 @@ def generate_script(news_items, persona):
 def main():
     config = load_config()
     news_items = fetch_news(config["sources"])
-    episode_title, lines = generate_script(news_items, config["persona"])
+    episode_title, episode_summary, lines = generate_script(news_items, config["persona"])
 
     OUT_DIR.mkdir(exist_ok=True)
     date_str = datetime.date.today().strftime("%Y%m%d")
@@ -174,6 +190,7 @@ def main():
         "date": date_str,
         "station_name": config["persona"]["station_name"],
         "episode_title": episode_title,
+        "episode_summary": episode_summary,
         "lines": lines,
     }
     with open(out_path, "w", encoding="utf-8") as f:

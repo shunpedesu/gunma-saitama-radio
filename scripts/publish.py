@@ -44,8 +44,14 @@ SOURCE_REPO_URL = "https://github.com/shunpedesu/gunma-saitama-radio"
 PODCAST_TITLE = os.environ.get("PODCAST_TITLE", "ラジオ・グンマサイタマ")
 PODCAST_DESCRIPTION = os.environ.get(
     "PODCAST_DESCRIPTION",
-    "群馬・埼玉のローカルネタを毎日お届けするAIラジオ番組。台本・音声はすべてAI"
-    "(Claude + VOICEVOX)が自動生成しています。"
+    "群馬・埼玉のローカルネタを、毎朝いちばんにお届けするAIラジオ番組。\n"
+    "群馬推しの「からっ風太郎」と埼玉推しの「ねぎ坊主」が、その日の地元ニュースや"
+    "あるあるネタ、方言まじりの小話を、ゆるい掛け合いでお送りします。上毛かるた、"
+    "温泉、お祭り、道の駅——ニュースにはならない小さな話題こそ、この番組の主役。\n"
+    "1話はたったの3〜5分。朝の支度や通勤・通学、家事や作業のおともにどうぞ。"
+    "フォローしておくと、毎朝あたらしい放送が自動で届きます。\n\n"
+    "制作：チームグンマサイタマゲーム（群馬と埼玉を“遊び場”にするインディーゲームチーム）。\n"
+    "台本・音声はすべてAI(Claude + VOICEVOX)が自動生成しています。"
     f"制作の裏側やソースコードはこちら: {SOURCE_REPO_URL}",
 )
 PODCAST_AUTHOR = os.environ.get("PODCAST_AUTHOR", "チームグンマサイタマゲーム")
@@ -152,6 +158,8 @@ def add_episode_item(tree, date_str, title, audio_url, file_size, script_summary
     item = ET.Element("item")
     ET.SubElement(item, "title").text = title
     ET.SubElement(item, "description").text = script_summary
+    # Apple Podcasts等はitunes:summaryを概要として表示するため同じ本文を入れておく
+    ET.SubElement(item, _itag("summary")).text = script_summary
     ET.SubElement(item, "pubDate").text = format_datetime(
         datetime.datetime.now(datetime.timezone.utc)
     )
@@ -186,7 +194,11 @@ def main():
     else:
         # タイトル生成に失敗した場合の日付ベースのフォールバック
         title = f"{script['station_name']} {date_disp}"
-    summary = " / ".join(line["text"] for line in script["lines"][:2])
+    # 各回の概要: AIが生成した約200字のepisode_summaryを優先。
+    # 無い場合(旧フォーマットや生成失敗時)は従来どおり先頭2セリフで代用する。
+    summary = (script.get("episode_summary") or "").strip()
+    if not summary:
+        summary = " / ".join(line["text"] for line in script["lines"][:2])
 
     audio_url = upload_episode(date_str, episode_path)
     file_size = episode_path.stat().st_size
