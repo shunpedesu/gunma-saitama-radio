@@ -8,7 +8,11 @@
   
   
   
+  
+  
   <channel>
+    
+    
     
     
     
@@ -26,7 +30,16 @@
     
     
     
-    <description>群馬・埼玉のローカルネタを毎日お届けするAIラジオ番組</description>
+    
+    
+    <description>群馬・埼玉のローカルネタを、毎朝いちばんにお届けするAIラジオ番組。
+群馬推しの「からっ風太郎」と埼玉推しの「ねぎ坊主」が、その日の地元ニュースやあるあるネタ、方言まじりの小話を、ゆるい掛け合いでお送りします。上毛かるた、温泉、お祭り、道の駅——ニュースにはならない小さな話題こそ、この番組の主役。
+1話はたったの3〜5分。朝の支度や通勤・通学、家事や作業のおともにどうぞ。フォローしておくと、毎朝あたらしい放送が自動で届きます。
+
+制作：チームグンマサイタマゲーム（群馬と埼玉を“遊び場”にするインディーゲームチーム）。
+台本・音声はすべてAI(Claude + VOICEVOX)が自動生成しています。制作の裏側やソースコードはこちら: https://github.com/shunpedesu/gunma-saitama-radio</description>
+    
+    
     
     
     
@@ -44,7 +57,11 @@
     
     
     
+    
+    
     <itunes:author>チームグンマサイタマゲーム</itunes:author>
+    
+    
     
     
     
@@ -62,32 +79,70 @@
     
     
     
+    
+    
     <item>
-      <title>七夕まつり＆群馬パスポートの奪い合い戦争【ラジオ・グンマサイタマ 2026/07/12】</title>
-      <description>どうも、からっ風太郎です。 / 相方のねぎ坊主です。</description>
-      <pubDate>Sun, 12 Jul 2026 22:52:09 +0000</pubDate>
-      <guid>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260712.mp3</guid>
-      <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260712.mp3" length="4106493" type="audio/mpeg"/>
+      <title>ラーメンと熱中症！夏の関東グルメ天気予報【ラジオ・グンマサイタマ 2026/07/13】</title>
+      <description>群馬に上陸した北海道発祥のラーメン店、熊谷の猛暑日予想、そして話題沸騰中の群馬パスポート！今回は食べて、笑えるグルメネタから、埼玉の熱さ（気温的に）まで、夏の関東を全力で駆け抜けます。からっ風太郎の群馬推しが冴え渡り、ねぎ坊主の埼玉ツッコミも炸裂。高カロリーなラーメン談義から熱中症対策まで、笑いと情報が融合したローカルラジオの真骨頂。群馬と埼玉、どちらが本当に熱いのか問い直す1話です。</description>
+      <itunes:summary>群馬に上陸した北海道発祥のラーメン店、熊谷の猛暑日予想、そして話題沸騰中の群馬パスポート！今回は食べて、笑えるグルメネタから、埼玉の熱さ（気温的に）まで、夏の関東を全力で駆け抜けます。からっ風太郎の群馬推しが冴え渡り、ねぎ坊主の埼玉ツッコミも炸裂。高カロリーなラーメン談義から熱中症対策まで、笑いと情報が融合したローカルラジオの真骨頂。群馬と埼玉、どちらが本当に熱いのか問い直す1話です。</itunes:summary>
+      <pubDate>Mon, 13 Jul 2026 22:59:07 +0000</pubDate>
+      <guid>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260713.mp3</guid>
+      <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260713.mp3" length="4310457" type="audio/mpeg"/>
     </item>
     <item>
+      
+      
+      <title>七夕まつり＆群馬パスポートの奪い合い戦争【ラジオ・グンマサイタマ 2026/07/12】</title>
+      
+      
+      <description>どうも、からっ風太郎です。 / 相方のねぎ坊主です。</description>
+      
+      
+      <pubDate>Sun, 12 Jul 2026 22:52:09 +0000</pubDate>
+      
+      
+      <guid>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260712.mp3</guid>
+      
+      
+      <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260712.mp3" length="4106493" type="audio/mpeg"/>
+      
+    
+    </item>
+    
+    
+    <item>
+      
+      
       
       
       <title>夏祭りと球児たちの熱戦【ラジオ・グンマサイタマ 2026/07/11】</title>
       
       
+      
+      
       <description>こんばんは！ラジオ・グンマサイタマのからっ風太郎です / 相方のねぎ坊主です。2026年7月11日の放送をお送りします</description>
+      
+      
       
       
       <pubDate>Sat, 11 Jul 2026 22:51:57 +0000</pubDate>
       
       
+      
+      
       <guid>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3</guid>
+      
+      
       
       
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3" length="4811590" type="audio/mpeg"/>
       
+      
+    
     
     </item>
+    
+    
     
     
     <item>
@@ -95,7 +150,11 @@
       
       
       
+      
+      
       <title>ラジオ・グンマサイタマ 2026/07/11</title>
+      
+      
       
       
       
@@ -105,7 +164,11 @@
       
       
       
+      
+      
       <pubDate>Sat, 11 Jul 2026 08:13:02 +0000</pubDate>
+      
+      
       
       
       
@@ -115,12 +178,18 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3" length="4782751" type="audio/mpeg"/>
       
       
+      
+    
     
     
     </item>
+    
+    
     
     
     
@@ -132,7 +201,11 @@
       
       
       
+      
+      
       <title>ラジオ・グンマサイタマ 2026/07/11</title>
+      
+      
       
       
       
@@ -146,7 +219,11 @@
       
       
       
+      
+      
       <pubDate>Sat, 11 Jul 2026 05:19:36 +0000</pubDate>
+      
+      
       
       
       
@@ -160,14 +237,20 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3" length="5135926" type="audio/mpeg"/>
       
       
       
+      
+    
     
     
     
     </item>
+    
+    
     
     
     
@@ -183,7 +266,11 @@
       
       
       
+      
+      
       <title>ラジオ・グンマサイタマ 2026/07/11</title>
+      
+      
       
       
       
@@ -201,7 +288,11 @@
       
       
       
+      
+      
       <pubDate>Sat, 11 Jul 2026 04:52:44 +0000</pubDate>
+      
+      
       
       
       
@@ -219,11 +310,15 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3" length="5291407" type="audio/mpeg"/>
       
       
       
       
+      
+    
     
     
     
@@ -233,11 +328,15 @@
     
     
     
+    
   
   
+    
     
     
     <itunes:image href="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/cover.png"/>
+    
+    
     
     
     
@@ -247,7 +346,11 @@
       
       
       
+      
+      
       <url>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/cover.png</url>
+      
+      
       
       
       
@@ -257,12 +360,18 @@
       
       
       
+      
+      
       <link>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes</link>
       
       
+      
+    
     
     
     </image>
+    
+    
     
     
     
@@ -272,7 +381,11 @@
       
       
       
+      
+      
       <itunes:name>チームグンマサイタマゲーム</itunes:name>
+      
+      
       
       
       
@@ -280,9 +393,13 @@
       <itunes:email>shunuehara888@gmail.com</itunes:email>
       
       
+      
+    
     
     
     </itunes:owner>
+    
+    
     
     
     
@@ -292,9 +409,13 @@
     
     
     
+    
+    
     <itunes:category text="Leisure"/>
     
     
+    
+  
   
   
   </channel>
@@ -302,6 +423,8 @@
   
   
   
+  
+
 
 
 
