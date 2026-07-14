@@ -13,6 +13,12 @@ jobs:
   build-and-publish:
     runs-on: ubuntu-latest
 
+    # GitHub Actionsのランナーは既定でUTC。cronは07:00 JST(=22:00 UTC)に走るが、
+    # その瞬間UTCはまだ前日のため date.today() が前日を返し、エピソード日付が
+    # 1日前にずれていた。ジョブ全体をJSTにして日付を当日基準にそろえる。
+    env:
+      TZ: Asia/Tokyo
+
     services:
       voicevox:
         image: voicevox/voicevox_engine:cpu-latest
