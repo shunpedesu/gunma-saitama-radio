@@ -2,8 +2,11 @@ name: Daily Gunma-Saitama Radio
 
 on:
   schedule:
-    # 毎日 JST 7:00 に実行 (UTC 22:00 前日)
-    - cron: "0 22 * * *"
+    # 07:00 JSTまでにSpotifyへ反映させるための前倒し。
+    # 04:45 JST(=19:45 UTC)起動 → GitHub Actionsの起動遅延(混雑時 最大~1時間)と
+    # パイプライン処理・Spotify側のRSS取得ラグを見込んでも7時前に配信が揃う想定。
+    # 毎時0分は遅延しやすいため、あえて45分起動にしている。
+    - cron: "45 19 * * *"
   workflow_dispatch: {}   # 手動実行ボタンも使えるように
 
 permissions:
