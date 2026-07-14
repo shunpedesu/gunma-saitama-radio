@@ -16,11 +16,11 @@ jobs:
   build-and-publish:
     runs-on: ubuntu-latest
 
-    # GitHub Actionsのランナーは既定でUTC。cronは07:00 JST(=22:00 UTC)に走るが、
-    # その瞬間UTCはまだ前日のため date.today() が前日を返し、エピソード日付が
-    # 1日前にずれていた。ジョブ全体をJSTにして日付を当日基準にそろえる。
-    env:
-      TZ: Asia/Tokyo
+    # 【日付ポリシー】各回は「振り返る前日(JST)」の日付でラベリングする。
+    # ランナー既定のUTCのまま date.today()/pubDate を使うと、早朝JST(04:45頃)実行時は
+    # UTC日付がちょうど「前日(JST)」に一致するため、タイトルもpubDateも同じUTC基準で
+    # 綺麗にそろう(＝前日振り返りラベル)。
+    # ※ TZ: Asia/Tokyo を足すと タイトル(JST=当日) と pubDate(UTC=前日) が1日ズレるので入れないこと。
 
     services:
       voicevox:
