@@ -18,6 +18,8 @@ from pathlib import Path
 import requests
 import yaml
 
+from voicevox_dict import register_words
+
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG_PATH = ROOT / "config" / "sources.yaml"
 OUT_DIR = ROOT / "out"
@@ -71,6 +73,14 @@ def main():
         script = json.load(f)
 
     speaker_map = load_speaker_map()
+
+    # 漢字の読み間違い(地名など)を防ぐため、合成前にユーザー辞書を登録する。
+    # 辞書登録に失敗しても合成自体は続行する。
+    try:
+        register_words(VOICEVOX_URL)
+    except Exception as e:
+        print(f"[WARN] user dict registration skipped: {e}")
+
     wav_chunks = []
     for i, line in enumerate(script["lines"]):
         if not isinstance(line, dict) or "speaker" not in line:
