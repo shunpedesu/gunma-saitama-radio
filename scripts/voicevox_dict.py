@@ -84,6 +84,33 @@ def register_words(base_url, words=WORDS, timeout=10):
     return ok, ng
 
 
+def _to_katakana(s):
+    """ひらがなをカタカナに変換する(VOICEVOXの読みは全角カタカナ必須のため)。"""
+    return "".join(
+        chr(ord(c) + 0x60) if "ぁ" <= c <= "ゖ" else c for c in s
+    )
+
+
+def register_pairs(base_url, pairs, timeout=10):
+    """[{"surface":..., "kana":...}, ...] を登録する。
+    台本生成AI(generate_script.py)が毎回出力する readings をそのまま渡せる。
+    ひらがなはカタカナへ、アクセントは0(平板)で登録し「読みの正しさ」を最優先にする。
+    """
+    words = []
+    for p in pairs or []:
+        try:
+            surface = (p.get("surface") or "").strip()
+            kana = _to_katakana((p.get("kana") or "").strip())
+        except AttributeError:
+            continue  # dict以外の要素はスキップ
+        if surface and kana:
+            words.append((surface, kana, 0))
+    if not words:
+        print("[OK] VOICEVOX user dict (dynamic): no readings to register")
+        return 0, 0
+    return register_words(base_url, words=words, timeout=timeout)
+
+
 if __name__ == "__main__":
     import os
 

@@ -18,7 +18,7 @@ from pathlib import Path
 import requests
 import yaml
 
-from voicevox_dict import register_words
+from voicevox_dict import register_words, register_pairs
 
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG_PATH = ROOT / "config" / "sources.yaml"
@@ -75,9 +75,12 @@ def main():
     speaker_map = load_speaker_map()
 
     # 漢字の読み間違い(地名など)を防ぐため、合成前にユーザー辞書を登録する。
+    #  1. 固定辞書(voicevox_dict.WORDS): 群馬・埼玉の基礎地名など常に効かせたい語
+    #  2. その回の readings: 台本生成AIが今日の台本から抽出した難読語(自動で増える)
     # 辞書登録に失敗しても合成自体は続行する。
     try:
         register_words(VOICEVOX_URL)
+        register_pairs(VOICEVOX_URL, script.get("readings", []))
     except Exception as e:
         print(f"[WARN] user dict registration skipped: {e}")
 
