@@ -159,7 +159,10 @@ def _call_claude(prompt):
     client = Anthropic()  # ANTHROPIC_API_KEY を環境変数から読む
     resp = client.messages.create(
         model="claude-haiku-4-5-20251001",
-        max_tokens=4000,
+        # 40〜60セリフ + episode_summary(約200字) + readings を1回のtool_useで返すため、
+        # 4000では出力が途中で切れて壊れた入力(raw多数/valid=0)になることがあった。
+        # 余裕を持たせて切り捨てを防ぐ。
+        max_tokens=8000,
         tools=[SCRIPT_TOOL],
         tool_choice={"type": "tool", "name": "submit_script"},
         messages=[{"role": "user", "content": prompt}],
