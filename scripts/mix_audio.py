@@ -12,6 +12,7 @@ assets/ 以下に以下のファイルを用意しておくこと（好きな音
   python scripts/mix_audio.py
 """
 import datetime
+import os
 import subprocess
 from pathlib import Path
 
@@ -26,16 +27,17 @@ def run(cmd):
 
 
 def main():
-    date_str = datetime.date.today().strftime("%Y%m%d")
-    voice_path = OUT_DIR / f"voice_{date_str}.wav"
-    episode_path = OUT_DIR / f"episode_{date_str}.mp3"
+    # ファイル名キーは他スクリプトと揃える(EPISODE_ID優先、無ければ当日日付)
+    key = os.environ.get("EPISODE_ID", "").strip() or datetime.date.today().strftime("%Y%m%d")
+    voice_path = OUT_DIR / f"voice_{key}.wav"
+    episode_path = OUT_DIR / f"episode_{key}.mp3"
 
     intro = ASSETS_DIR / "intro.mp3"
     outro = ASSETS_DIR / "outro.mp3"
     bgm = ASSETS_DIR / "bgm.mp3"
 
     # 1. 本編音声にBGMを薄く重ねる(BGMをloopしてvoiceの長さに合わせ、音量を下げてミックス)
-    body_with_bgm = OUT_DIR / f"body_bgm_{date_str}.wav"
+    body_with_bgm = OUT_DIR / f"body_bgm_{key}.wav"
     run(
         [
             "ffmpeg", "-y",

@@ -192,8 +192,7 @@ def _valid_lines(lines):
     return valid[:MAX_LINES]
 
 
-def generate_script(news_items, persona):
-    prompt = build_prompt(news_items, persona)
+def _run_generation(prompt):
     # モデルが極端に長い/壊れた出力を返すことが稀にあるため、
     # 有効なセリフ数が少なすぎる場合は1回だけ再試行する
     for attempt in range(2):
@@ -214,14 +213,74 @@ def generate_script(news_items, persona):
     raise RuntimeError("failed to generate a valid script after retry")
 
 
+def generate_script(news_items, persona):
+    return _run_generation(build_prompt(news_items, persona))
+
+
+# ===== 特別編(ニュースではなく指定の資料をもとに作る回) =====
+def load_special():
+    """SPECIAL_FILE 環境変数が指す specials/*.json を読む。未指定なら None(=通常のニュース回)。"""
+    rel = os.environ.get("SPECIAL_FILE", "").strip()
+    if not rel:
+        return None
+    with open(ROOT / rel, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def build_special_prompt(special, persona):
+    hosts = persona["hosts"]
+    return f"""あなたはローカルラジオ番組「{persona['station_name']}」の放送作家です。
+今日は【特別編】。以下の資料をもとに、{hosts[0]['name']}と{hosts[1]['name']}の2人が
+語り合う、対話形式の自然なラジオ台本を作ってください。
+
+# 出演者
+{hosts[0]['name']}: {hosts[0]['role']}
+{hosts[1]['name']}: {hosts[1]['role']}
+
+# トーン
+{persona['tone']}
+
+# 資料（この内容を活用する。宣伝文をそのまま丸読みせず、2人の会話として自然にかみ砕く）
+{special['brief']}
+
+# 特別編のルール
+- URLやリンクは【絶対に口に出さない・読み上げない】。代わりに「番組ページ（概要欄）の
+  リンクから、すぐ遊べる」と一度だけ自然に案内する。
+- 宣伝色を出しすぎず、2人の感想・ツッコミ・具体例（代表モンスターなど）で楽しく紹介する。
+- 全体で40〜60セリフ、読み上げて3〜5分程度。
+- セリフ内で英数字の二重引用符(")は使わない。
+- 「からっ風」は冬の季節風。今の季節に合わない「からっ風が吹いている」等の表現はしない。
+
+# 出力
+submit_script ツールで提出。
+episode_summary は約200字で、この特別編の聴きどころを紹介（番組ページのリンクから遊べる旨も含める）。
+readings は台本中の難読語（固有名詞・地名など）の正しいカタカナ読み。
+"""
+
+
+def generate_special(special, persona):
+    title, summary, readings, lines = _run_generation(build_special_prompt(special, persona))
+    # タイトルは資料側で指定があればそれを優先し、狙った見出しに固定する
+    if special.get("title"):
+        title = special["title"].strip()
+    return title, summary, readings, lines
+
+
 def main():
     config = load_config()
-    news_items = fetch_news(config["sources"])
-    episode_title, episode_summary, readings, lines = generate_script(news_items, config["persona"])
+    special = load_special()
+    if special:
+        print(f"[INFO] special episode mode: {os.environ.get('SPECIAL_FILE')}")
+        episode_title, episode_summary, readings, lines = generate_special(special, config["persona"])
+    else:
+        news_items = fetch_news(config["sources"])
+        episode_title, episode_summary, readings, lines = generate_script(news_items, config["persona"])
 
     OUT_DIR.mkdir(exist_ok=True)
+    # ファイル名キー: EPISODE_ID があればそれ(特別編は日次と衝突しない専用ID)、無ければ当日日付
+    key = os.environ.get("EPISODE_ID", "").strip() or datetime.date.today().strftime("%Y%m%d")
     date_str = datetime.date.today().strftime("%Y%m%d")
-    out_path = OUT_DIR / f"script_{date_str}.json"
+    out_path = OUT_DIR / f"script_{key}.json"
     payload = {
         "date": date_str,
         "station_name": config["persona"]["station_name"],
@@ -229,6 +288,8 @@ def main():
         "episode_summary": episode_summary,
         "readings": readings,
         "lines": lines,
+        "special": bool(special),
+        "episode_link": (special.get("link", "").strip() if special else ""),
     }
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(payload, f, ensure_ascii=False, indent=2)

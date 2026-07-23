@@ -7,7 +7,12 @@ on:
     # パイプライン処理・Spotify側のRSS取得ラグを見込んでも7時前に配信が揃う想定。
     # 毎時0分は遅延しやすいため、あえて45分起動にしている。
     - cron: "45 19 * * *"
-  workflow_dispatch: {}   # 手動実行ボタンも使えるように
+  workflow_dispatch:      # 手動実行ボタン
+    inputs:
+      special:
+        description: "特別編のID(specials/<id>.json)。空欄なら通常のニュース回"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -55,6 +60,9 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
+          # 特別編を指定した手動実行のときだけ、資料ファイルと専用の(日次と衝突しない)ファイル名IDを渡す
+          SPECIAL_FILE: ${{ (github.event_name == 'workflow_dispatch' && inputs.special != '') && format('specials/{0}.json', inputs.special) || '' }}
+          EPISODE_ID: ${{ (github.event_name == 'workflow_dispatch' && inputs.special != '') && format('special-{0}', inputs.special) || '' }}
         run: python scripts/run_pipeline.py
 
       - name: Commit feed.xml

@@ -88,8 +88,8 @@ def upload_to_blob(pathname, file_path, content_type):
     return resp.json()["url"]
 
 
-def upload_episode(date_str, episode_path):
-    pathname = f"episodes/episode_{date_str}.mp3"
+def upload_episode(key, episode_path):
+    pathname = f"episodes/episode_{key}.mp3"
     return upload_to_blob(pathname, episode_path, "audio/mpeg")
 
 
@@ -180,15 +180,20 @@ def prettify(tree):
 
 
 def main():
-    date_str = datetime.date.today().strftime("%Y%m%d")
-    episode_path = OUT_DIR / f"episode_{date_str}.mp3"
-    script_path = OUT_DIR / f"script_{date_str}.json"
+    # ファイル名キー: EPISODE_ID があればそれ(特別編)、無ければ当日日付
+    key = os.environ.get("EPISODE_ID", "").strip() or datetime.date.today().strftime("%Y%m%d")
+    date_str = datetime.date.today().strftime("%Y%m%d")  # タイトル表示の日付は常に実日付
+    episode_path = OUT_DIR / f"episode_{key}.mp3"
+    script_path = OUT_DIR / f"script_{key}.json"
 
     with open(script_path, encoding="utf-8") as f:
         script = json.load(f)
     date_disp = f"{date_str[:4]}/{date_str[4:6]}/{date_str[6:]}"
     episode_title = script.get("episode_title", "").strip()
-    if episode_title:
+    if script.get("special"):
+        # 特別編は日付を付けず、指定タイトルをそのまま使う
+        title = episode_title or script["station_name"]
+    elif episode_title:
         # AIが考えたキャッチーなタイトル + 番組名/日付を併記
         title = f"{episode_title}【{script['station_name']} {date_disp}】"
     else:
@@ -199,8 +204,12 @@ def main():
     summary = (script.get("episode_summary") or "").strip()
     if not summary:
         summary = " / ".join(line["text"] for line in script["lines"][:2])
+    # 導線リンク(特別編など)がある場合は概要欄の末尾に追記して、リスナーがタップで飛べるようにする
+    link = (script.get("episode_link") or "").strip()
+    if link:
+        summary = f"{summary}\n\n▶ ゲームはこちら（ブラウザですぐ遊べます）: {link}"
 
-    audio_url = upload_episode(date_str, episode_path)
+    audio_url = upload_episode(key, episode_path)
     file_size = episode_path.stat().st_size
 
     FEED_DIR.mkdir(exist_ok=True)

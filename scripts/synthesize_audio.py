@@ -67,8 +67,9 @@ def concat_wavs(wav_bytes_list, out_path):
 
 
 def main():
-    date_str = datetime.date.today().strftime("%Y%m%d")
-    script_path = OUT_DIR / f"script_{date_str}.json"
+    # ファイル名キーは generate_script.py と揃える(EPISODE_ID優先、無ければ当日日付)
+    key = os.environ.get("EPISODE_ID", "").strip() or datetime.date.today().strftime("%Y%m%d")
+    script_path = OUT_DIR / f"script_{key}.json"
     with open(script_path, encoding="utf-8") as f:
         script = json.load(f)
 
@@ -96,7 +97,7 @@ def main():
         wav_chunks.append(synth_line(line["text"], speaker_id))
         print(f"[OK] synthesized line {i+1}/{len(script['lines'])}")
 
-    out_path = OUT_DIR / f"voice_{date_str}.wav"
+    out_path = OUT_DIR / f"voice_{key}.wav"
     concat_wavs(wav_chunks, out_path)
     print(f"[OK] voice track saved: {out_path}")
 
