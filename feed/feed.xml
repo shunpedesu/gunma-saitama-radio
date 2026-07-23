@@ -14,6 +14,8 @@
   
   
   
+  
+  
   <channel>
     
     
@@ -29,7 +31,11 @@
     
     
     
+    
+    
     <title>ラジオ・グンマサイタマ</title>
+    
+    
     
     
     
@@ -64,7 +70,11 @@
     
     
     
+    
+    
     <language>ja</language>
+    
+    
     
     
     
@@ -94,6 +104,8 @@
     
     
     
+    
+    
     <link>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes</link>
     
     
@@ -109,39 +121,87 @@
     
     
     
+    
+    
     <item>
-      <title>猛暑とウナギ祭り、埼玉も熱い夏!【ラジオ・グンマサイタマ 2026/07/23】</title>
-      <description>7月も終盤、群馬・埼玉は連日猛暑に見舞われています。今回は群馬県内で39.8度を記録した異常な高気温について、からっ風太郎とねぎ坊主が熱くトーク。さらに土用の丑の日を前にした県内のウナギ商戦が活況を呈していることや、スズラン前橋店での『ふしぎな水族園』イベントなど、夏を満喫するネタで盛り上がります。2人の掛け合いから、夏の群馬・埼玉の熱い雰囲気が伝わる、この季節ならではの一話です。</description>
-      <itunes:summary>7月も終盤、群馬・埼玉は連日猛暑に見舞われています。今回は群馬県内で39.8度を記録した異常な高気温について、からっ風太郎とねぎ坊主が熱くトーク。さらに土用の丑の日を前にした県内のウナギ商戦が活況を呈していることや、スズラン前橋店での『ふしぎな水族園』イベントなど、夏を満喫するネタで盛り上がります。2人の掛け合いから、夏の群馬・埼玉の熱い雰囲気が伝わる、この季節ならではの一話です。</itunes:summary>
-      <pubDate>Thu, 23 Jul 2026 23:25:27 +0000</pubDate>
-      <guid>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260723.mp3</guid>
-      <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260723.mp3" length="2983436" type="audio/mpeg"/>
+      <title>【特別編】群馬愛から誕生！GPSゲーム『群馬モンスターズ』公開スペシャル</title>
+      <description>群馬県東吾妻町のチームグンマサイタマゲームが、GPS連動ブラウザゲーム『群馬モンスターズ』のベータ版を公開！からっ風太郎とねぎ坊主が、このゲームの魅力を語り合います。スマホで現実の街を歩きながら、群馬の食・温泉・山・川・歴史・文化をモチーフにした全108体のモンスターに出会える新しい地域体験型ゲーム。アプリのインストール不要で、ブラウザだけで無料プレイ可能。番組ページの概要欄のリンクからすぐ遊べます。
+
+▶ ゲームはこちら（ブラウザですぐ遊べます）: https://gunma-monsters.vercel.app</description>
+      <itunes:summary>群馬県東吾妻町のチームグンマサイタマゲームが、GPS連動ブラウザゲーム『群馬モンスターズ』のベータ版を公開！からっ風太郎とねぎ坊主が、このゲームの魅力を語り合います。スマホで現実の街を歩きながら、群馬の食・温泉・山・川・歴史・文化をモチーフにした全108体のモンスターに出会える新しい地域体験型ゲーム。アプリのインストール不要で、ブラウザだけで無料プレイ可能。番組ページの概要欄のリンクからすぐ遊べます。
+
+▶ ゲームはこちら（ブラウザですぐ遊べます）: https://gunma-monsters.vercel.app</itunes:summary>
+      <pubDate>Thu, 23 Jul 2026 23:46:51 +0000</pubDate>
+      <guid>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_special-gunma-monsters.mp3</guid>
+      <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_special-gunma-monsters.mp3" length="6331707" type="audio/mpeg"/>
     </item>
     <item>
+      
+      
+      <title>猛暑とウナギ祭り、埼玉も熱い夏!【ラジオ・グンマサイタマ 2026/07/23】</title>
+      
+      
+      <description>7月も終盤、群馬・埼玉は連日猛暑に見舞われています。今回は群馬県内で39.8度を記録した異常な高気温について、からっ風太郎とねぎ坊主が熱くトーク。さらに土用の丑の日を前にした県内のウナギ商戦が活況を呈していることや、スズラン前橋店での『ふしぎな水族園』イベントなど、夏を満喫するネタで盛り上がります。2人の掛け合いから、夏の群馬・埼玉の熱い雰囲気が伝わる、この季節ならではの一話です。</description>
+      
+      
+      <itunes:summary>7月も終盤、群馬・埼玉は連日猛暑に見舞われています。今回は群馬県内で39.8度を記録した異常な高気温について、からっ風太郎とねぎ坊主が熱くトーク。さらに土用の丑の日を前にした県内のウナギ商戦が活況を呈していることや、スズラン前橋店での『ふしぎな水族園』イベントなど、夏を満喫するネタで盛り上がります。2人の掛け合いから、夏の群馬・埼玉の熱い雰囲気が伝わる、この季節ならではの一話です。</itunes:summary>
+      
+      
+      <pubDate>Thu, 23 Jul 2026 23:25:27 +0000</pubDate>
+      
+      
+      <guid>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260723.mp3</guid>
+      
+      
+      <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260723.mp3" length="2983436" type="audio/mpeg"/>
+      
+    
+    </item>
+    
+    
+    <item>
+      
+      
       
       
       <title>猛暑とマスコット、群馬埼玉の熱いニュース【ラジオ・グンマサイタマ 2026/07/14】</title>
       
       
+      
+      
       <description>今日も暑い！群馬・埼玉両県で猛暑日を記録。桐生では37.3℃を超える危険な暑さが続く中、何かと話題の群馬・館林のマスコット『たてポン』に新しいポロシャツが登場！商標問題で波乱万丈な展開もあったようだが、グッズ販売は順調な様子。一方、埼玉ではコアラ2匹が新しくやってきて話題沸騰。猛暑とローカルニュースが彩る、からっ風太郎とねぎ坊主の掛け合いをお楽しみください。熱さ対策と地元愛がぎゅっと詰まった1話です。</description>
+      
+      
       
       
       <itunes:summary>今日も暑い！群馬・埼玉両県で猛暑日を記録。桐生では37.3℃を超える危険な暑さが続く中、何かと話題の群馬・館林のマスコット『たてポン』に新しいポロシャツが登場！商標問題で波乱万丈な展開もあったようだが、グッズ販売は順調な様子。一方、埼玉ではコアラ2匹が新しくやってきて話題沸騰。猛暑とローカルニュースが彩る、からっ風太郎とねぎ坊主の掛け合いをお楽しみください。熱さ対策と地元愛がぎゅっと詰まった1話です。</itunes:summary>
       
       
+      
+      
       <pubDate>Tue, 14 Jul 2026 20:45:58 +0000</pubDate>
+      
+      
       
       
       <guid>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260715.mp3</guid>
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260715.mp3" length="4390287" type="audio/mpeg"/>
       
+      
+    
     
     </item>
     
     
+    
+    
     <item>
+      
+      
       
       
       
@@ -151,7 +211,11 @@
       
       
       
+      
+      
       <description>群馬に上陸した北海道発祥のラーメン店、熊谷の猛暑日予想、そして話題沸騰中の群馬パスポート！今回は食べて、笑えるグルメネタから、埼玉の熱さ（気温的に）まで、夏の関東を全力で駆け抜けます。からっ風太郎の群馬推しが冴え渡り、ねぎ坊主の埼玉ツッコミも炸裂。高カロリーなラーメン談義から熱中症対策まで、笑いと情報が融合したローカルラジオの真骨頂。群馬と埼玉、どちらが本当に熱いのか問い直す1話です。</description>
+      
+      
       
       
       
@@ -161,7 +225,11 @@
       
       
       
+      
+      
       <pubDate>Mon, 13 Jul 2026 22:59:07 +0000</pubDate>
+      
+      
       
       
       
@@ -171,9 +239,13 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260713.mp3" length="4310457" type="audio/mpeg"/>
       
       
+      
+    
     
     
     </item>
@@ -181,7 +253,11 @@
     
     
     
+    
+    
     <item>
+      
+      
       
       
       
@@ -195,7 +271,11 @@
       
       
       
+      
+      
       <description>どうも、からっ風太郎です。 / 相方のねぎ坊主です。</description>
+      
+      
       
       
       
@@ -209,7 +289,11 @@
       
       
       
+      
+      
       <guid>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260712.mp3</guid>
+      
+      
       
       
       
@@ -220,6 +304,8 @@
       
       
       
+      
+    
     
     
     
@@ -230,7 +316,11 @@
     
     
     
+    
+    
     <item>
+      
+      
       
       
       
@@ -248,7 +338,11 @@
       
       
       
+      
+      
       <description>こんばんは！ラジオ・グンマサイタマのからっ風太郎です / 相方のねぎ坊主です。2026年7月11日の放送をお送りします</description>
+      
+      
       
       
       
@@ -266,7 +360,11 @@
       
       
       
+      
+      
       <guid>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3</guid>
+      
+      
       
       
       
@@ -280,11 +378,15 @@
       
       
       
+      
+    
     
     
     
     
     </item>
+    
+    
     
     
     
@@ -304,7 +406,11 @@
       
       
       
+      
+      
       <title>ラジオ・グンマサイタマ 2026/07/11</title>
+      
+      
       
       
       
@@ -326,7 +432,11 @@
       
       
       
+      
+      
       <pubDate>Sat, 11 Jul 2026 08:13:02 +0000</pubDate>
+      
+      
       
       
       
@@ -348,18 +458,24 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3" length="4782751" type="audio/mpeg"/>
       
       
       
       
       
+      
+    
     
     
     
     
     
     </item>
+    
+    
     
     
     
@@ -383,7 +499,11 @@
       
       
       
+      
+      
       <title>ラジオ・グンマサイタマ 2026/07/11</title>
+      
+      
       
       
       
@@ -409,7 +529,11 @@
       
       
       
+      
+      
       <pubDate>Sat, 11 Jul 2026 05:19:36 +0000</pubDate>
+      
+      
       
       
       
@@ -435,6 +559,8 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3" length="5135926" type="audio/mpeg"/>
       
       
@@ -442,6 +568,8 @@
       
       
       
+      
+    
     
     
     
@@ -449,6 +577,8 @@
     
     
     </item>
+    
+    
     
     
     
@@ -476,7 +606,11 @@
       
       
       
+      
+      
       <title>ラジオ・グンマサイタマ 2026/07/11</title>
+      
+      
       
       
       
@@ -506,7 +640,11 @@
       
       
       
+      
+      
       <pubDate>Sat, 11 Jul 2026 04:52:44 +0000</pubDate>
+      
+      
       
       
       
@@ -536,6 +674,8 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3" length="5291407" type="audio/mpeg"/>
       
       
@@ -544,6 +684,8 @@
       
       
       
+      
+    
     
     
     
@@ -559,14 +701,18 @@
     
     
     
+    
   
   
+    
     
     
     
     
     
     <itunes:image href="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/cover.png"/>
+    
+    
     
     
     
@@ -588,7 +734,11 @@
       
       
       
+      
+      
       <url>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/cover.png</url>
+      
+      
       
       
       
@@ -610,18 +760,24 @@
       
       
       
+      
+      
       <link>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes</link>
       
       
       
       
       
+      
+    
     
     
     
     
     
     </image>
+    
+    
     
     
     
@@ -643,7 +799,11 @@
       
       
       
+      
+      
       <itunes:name>チームグンマサイタマゲーム</itunes:name>
+      
+      
       
       
       
@@ -660,12 +820,16 @@
       
       
       
+      
+    
     
     
     
     
     
     </itunes:owner>
+    
+    
     
     
     
@@ -687,12 +851,16 @@
     
     
     
+    
+    
     <itunes:category text="Leisure"/>
     
     
     
     
     
+    
+  
   
   
   
@@ -706,6 +874,8 @@
   
   
   
+  
+
 
 
 
