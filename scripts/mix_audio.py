@@ -44,7 +44,9 @@ def main():
             "-i", str(voice_path),
             "-stream_loop", "-1", "-i", str(bgm),
             "-filter_complex",
-            "[1:a]volume=0.12[bgm];[0:a][bgm]amix=inputs=2:duration=first:dropout_transition=2[out]",
+            # BGMは常時薄く流れる。大きいと「ツー」という一定の背景音として気になるため控えめに。
+            # 0(BGM無し)〜0.12の範囲で調整可。0.05で「言われないと気づかない」程度。
+            "[1:a]volume=0.05[bgm];[0:a][bgm]amix=inputs=2:duration=first:dropout_transition=2[out]",
             "-map", "[out]",
             str(body_with_bgm),
         ]
