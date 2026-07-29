@@ -50,15 +50,27 @@ def synth_line(text, speaker_id):
 
 
 def concat_wavs(wav_bytes_list, out_path):
-    """複数のwavバイト列を単純連結して1本のwavにする"""
+    """複数のwavバイト列を単純連結して1本のwavにする。
+    連結は先頭wavのフォーマット(サンプルレート/チャンネル数/ビット幅)を全体に流用するため、
+    途中に別フォーマットのwavが混じると、その区間が雑音や連続音(ツー音)になり得る。
+    フォーマット不一致は事故のもとなので検知したら警告を出す(原因究明用)。
+    """
     import io
 
     frames = []
-    params = None
-    for b in wav_bytes_list:
+    ref = None  # (nchannels, sampwidth, framerate)
+    for i, b in enumerate(wav_bytes_list):
         with wave.open(io.BytesIO(b), "rb") as w:
-            if params is None:
+            fmt = (w.getnchannels(), w.getsampwidth(), w.getframerate())
+            if ref is None:
+                ref = fmt
                 params = w.getparams()
+            elif fmt != ref:
+                # 先頭と違うフォーマットのセリフが混入 → 連続ノイズの典型的な原因
+                print(
+                    f"[WARN] wav format mismatch at line {i+1}: {fmt} != {ref}. "
+                    f"この区間は雑音/ツー音になる可能性があります(VOICEVOXの不安定な出力の疑い)。"
+                )
             frames.append(w.readframes(w.getnframes()))
     with wave.open(str(out_path), "wb") as out:
         out.setparams(params)
