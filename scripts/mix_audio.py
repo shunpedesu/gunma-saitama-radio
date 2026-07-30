@@ -1,12 +1,13 @@
 """
 音声ミックススクリプト
-voice_YYYYMMDD.wav に イントロ/アウトロジングル・BGMを ffmpeg で合成し、
+voice_YYYYMMDD.wav に イントロ/アウトロジングルを ffmpeg で結合し、
 最終的な mp3 (episode_YYYYMMDD.mp3) を出力する。
 
 assets/ 以下に以下のファイルを用意しておくこと（好きな音源に差し替え可）:
   assets/intro.mp3   オープニングジングル
   assets/outro.mp3   エンディングジングル
-  assets/bgm.mp3      本編中に薄く流すBGM(ループ・音量小さめ推奨)
+  ※本編BGM(bgm.mp3)は「ツー」という一定の背景音(耳鳴りのよう)になり不評だったため
+    2026-07-30に廃止。復活させる場合は本編にごく小さい音量でamixすること。
 
 使い方:
   python scripts/mix_audio.py
@@ -34,25 +35,21 @@ def main():
 
     intro = ASSETS_DIR / "intro.mp3"
     outro = ASSETS_DIR / "outro.mp3"
-    bgm = ASSETS_DIR / "bgm.mp3"
 
-    # 1. 本編音声にBGMを薄く重ねる(BGMをloopしてvoiceの長さに合わせ、音量を下げてミックス)
-    body_with_bgm = OUT_DIR / f"body_bgm_{key}.wav"
+    # 1. 本編音声を、intro/outro(44100Hz)と揃えて連結できるように44100Hz/モノへリサンプルする。
+    #    ※BGMは入れない。常時流すと「ツー」という一定の背景音(耳鳴りのよう)になり不評だったため
+    #      2026-07-30に廃止。BGMを復活させたい場合は volume を十分小さくして amix で重ねること。
+    body = OUT_DIR / f"body_{key}.wav"
     run(
         [
             "ffmpeg", "-y",
             "-i", str(voice_path),
-            "-stream_loop", "-1", "-i", str(bgm),
-            "-filter_complex",
-            # BGMは常時薄く流れる。大きいと「ツー」という一定の背景音として気になるため控えめに。
-            # 0(BGM無し)〜0.12の範囲で調整可。0.05で「言われないと気づかない」程度。
-            "[1:a]volume=0.05[bgm];[0:a][bgm]amix=inputs=2:duration=first:dropout_transition=2[out]",
-            "-map", "[out]",
-            str(body_with_bgm),
+            "-ar", "44100", "-ac", "1",
+            str(body),
         ]
     )
 
-    # 2. イントロ + 本編(BGM入り) + アウトロ を結合してmp3化
+    # 2. イントロ + 本編 + アウトロ を結合してmp3化
     # 注意: concat demuxer(-f concat)はmp3とwavなど形式の異なるファイルを混在させると
     # デコードエラーで音声が欠落することがあるため、filter_complexのconcatフィルタで
     # 各入力を正しくデコードしてから結合する
@@ -60,7 +57,7 @@ def main():
         [
             "ffmpeg", "-y",
             "-i", str(intro),
-            "-i", str(body_with_bgm),
+            "-i", str(body),
             "-i", str(outro),
             "-filter_complex", "[0:a][1:a][2:a]concat=n=3:v=0:a=1[out]",
             "-map", "[out]",
