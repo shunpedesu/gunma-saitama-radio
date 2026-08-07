@@ -44,6 +44,8 @@
   
   
   
+  
+  
   <channel>
     
     
@@ -89,7 +91,11 @@
     
     
     
+    
+    
     <title>ラジオ・グンマサイタマ</title>
+    
+    
     
     
     
@@ -184,7 +190,11 @@
     
     
     
+    
+    
     <language>ja</language>
+    
+    
     
     
     
@@ -274,6 +284,8 @@
     
     
     
+    
+    
     <link>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes</link>
     
     
@@ -319,39 +331,83 @@
     
     
     
+    
+    
     <item>
-      <title>群馬推し、見せ場です。茨城も本気で来た【ラジオ・グンマサイタマ 2026/08/07】</title>
-      <description>茨城県が群馬県の「パスポート」をモデルに、独自のパスポートを発行することになった。群馬県知事も快諾したというニュースに、からっ風太郎とねぎ坊主がテンション上昇！ さらに、みなかみ町に大江戸温泉物語がグランドオープンし、埼玉からも知事選の新しい候補が登場。群馬・埼玉の最新ホットニュースを2人の掛け合いで紹介します。群馬推し派とツッコミ派の息がぴったり合わった回です。</description>
-      <itunes:summary>茨城県が群馬県の「パスポート」をモデルに、独自のパスポートを発行することになった。群馬県知事も快諾したというニュースに、からっ風太郎とねぎ坊主がテンション上昇！ さらに、みなかみ町に大江戸温泉物語がグランドオープンし、埼玉からも知事選の新しい候補が登場。群馬・埼玉の最新ホットニュースを2人の掛け合いで紹介します。群馬推し派とツッコミ派の息がぴったり合わった回です。</itunes:summary>
-      <pubDate>Fri, 07 Aug 2026 00:53:44 +0000</pubDate>
+      <title>群馬の賃金UP・埼玉も続く夏の明るいニュース【ラジオ・グンマサイタマ 2026/08/07】</title>
+      <description>群馬県の最低賃金が1120円に引き上げられ、過去2番目の上げ幅を記録。埼玉県も1196円へと引き上げられるなど、北関東地域で嬉しいニュースが相次ぎました。さらに茨城県知事が群馬のパスポート施策を「思い切りパクった」と直談判、埼玉の夏の花スポット、そして地域の食や文化の魅力など、2人の掛け合いで明るく楽しく紹介していきます。からっ風太郎のボケと、ねぎ坊主のツッコミで、群馬・埼玉への愛に満ちた1時間です。</description>
+      <itunes:summary>群馬県の最低賃金が1120円に引き上げられ、過去2番目の上げ幅を記録。埼玉県も1196円へと引き上げられるなど、北関東地域で嬉しいニュースが相次ぎました。さらに茨城県知事が群馬のパスポート施策を「思い切りパクった」と直談判、埼玉の夏の花スポット、そして地域の食や文化の魅力など、2人の掛け合いで明るく楽しく紹介していきます。からっ風太郎のボケと、ねぎ坊主のツッコミで、群馬・埼玉への愛に満ちた1時間です。</itunes:summary>
+      <pubDate>Fri, 07 Aug 2026 20:24:41 +0000</pubDate>
       <guid>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260807.mp3</guid>
-      <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260807.mp3" length="5802571" type="audio/mpeg"/>
+      <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260807.mp3" length="6248533" type="audio/mpeg"/>
     </item>
     <item>
+      
+      
+      <title>群馬推し、見せ場です。茨城も本気で来た【ラジオ・グンマサイタマ 2026/08/07】</title>
+      
+      
+      <description>茨城県が群馬県の「パスポート」をモデルに、独自のパスポートを発行することになった。群馬県知事も快諾したというニュースに、からっ風太郎とねぎ坊主がテンション上昇！ さらに、みなかみ町に大江戸温泉物語がグランドオープンし、埼玉からも知事選の新しい候補が登場。群馬・埼玉の最新ホットニュースを2人の掛け合いで紹介します。群馬推し派とツッコミ派の息がぴったり合わった回です。</description>
+      
+      
+      <itunes:summary>茨城県が群馬県の「パスポート」をモデルに、独自のパスポートを発行することになった。群馬県知事も快諾したというニュースに、からっ風太郎とねぎ坊主がテンション上昇！ さらに、みなかみ町に大江戸温泉物語がグランドオープンし、埼玉からも知事選の新しい候補が登場。群馬・埼玉の最新ホットニュースを2人の掛け合いで紹介します。群馬推し派とツッコミ派の息がぴったり合わった回です。</itunes:summary>
+      
+      
+      <pubDate>Fri, 07 Aug 2026 00:53:44 +0000</pubDate>
+      
+      
+      <guid>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260807.mp3</guid>
+      
+      
+      <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260807.mp3" length="5802571" type="audio/mpeg"/>
+      
+    
+    </item>
+    
+    
+    <item>
+      
+      
       
       
       <title>上毛三山フラペチーノ&amp;秩父の新体験【ラジオ・グンマサイタマ 2026/08/05】</title>
       
       
+      
+      
       <description>8月5日は群馬・埼玉の楽しい話題がいっぱい！スターバックスの日本出店30周年記念で、赤城・榛名・妙義の上毛三山をモチーフにした県限定フラペチーノが登場。一方、埼玉では秩父札所巡りにスタンプラリーの新特典が追加され、写経や座禅などの体験ができるように。からっ風太郎とねぎ坊主が、地元の魅力を引き出しながら、グルメから文化まで幅広くご紹介します。夏の思い出作りに役立つ情報が満載です。</description>
+      
+      
       
       
       <itunes:summary>8月5日は群馬・埼玉の楽しい話題がいっぱい！スターバックスの日本出店30周年記念で、赤城・榛名・妙義の上毛三山をモチーフにした県限定フラペチーノが登場。一方、埼玉では秩父札所巡りにスタンプラリーの新特典が追加され、写経や座禅などの体験ができるように。からっ風太郎とねぎ坊主が、地元の魅力を引き出しながら、グルメから文化まで幅広くご紹介します。夏の思い出作りに役立つ情報が満載です。</itunes:summary>
       
       
+      
+      
       <pubDate>Wed, 05 Aug 2026 20:51:09 +0000</pubDate>
+      
+      
       
       
       <guid>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260805.mp3</guid>
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260805.mp3" length="5431841" type="audio/mpeg"/>
       
+      
+    
     
     </item>
     
     
+    
+    
     <item>
+      
+      
       
       
       
@@ -361,7 +417,11 @@
       
       
       
+      
+      
       <description>今日も群馬・埼玉の話題を熱くお届け。高崎市の停電復旧、みなかみ町の光の切り絵ナイトウォークが今期でついに最終章、そして夏の埼玉会館フェス、レッズの新シーズン始動など、前向きなニュースが満載です。からっ風太郎とねぎ坊主のいつもの掛け合いで、地域の魅力を引き出します。季節の夏祭りや実りの話題も交えながら、テンポよく話題を切り替えていく、やみつきになるラジオの時間です。</description>
+      
+      
       
       
       
@@ -371,7 +431,11 @@
       
       
       
+      
+      
       <pubDate>Tue, 04 Aug 2026 20:57:27 +0000</pubDate>
+      
+      
       
       
       
@@ -381,9 +445,13 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260804.mp3" length="5072814" type="audio/mpeg"/>
       
       
+      
+    
     
     
     </item>
@@ -391,7 +459,11 @@
     
     
     
+    
+    
     <item>
+      
+      
       
       
       
@@ -405,7 +477,11 @@
       
       
       
+      
+      
       <description>真夏8月！群馬・埼玉から今週のホットなニュースと楽しい話題をお届けします。群馬ゆかりのアニメ映画の話題から、懐かしの甲子園の歴史、そして夏を彩るイベント情報まで。からっ風太郎とねぎ坊主が、地元ネタで盛り上がり、笑いあり、へえ！という発見ありの7分間です。群馬推しと埼玉推しの2人の掛け合いから、夏のグンマ・サイタマの魅力をぜひ感じてください。</description>
+      
+      
       
       
       
@@ -419,7 +495,11 @@
       
       
       
+      
+      
       <pubDate>Mon, 03 Aug 2026 20:50:24 +0000</pubDate>
+      
+      
       
       
       
@@ -433,10 +513,14 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260803.mp3" length="5396315" type="audio/mpeg"/>
       
       
       
+      
+    
     
     
     
@@ -447,7 +531,11 @@
     
     
     
+    
+    
     <item>
+      
+      
       
       
       
@@ -465,7 +553,11 @@
       
       
       
+      
+      
       <description>8月の群馬・埼玉をホットなニュースで盛り上げる！前橋市で開催された小学生のロボット競技会、群馬発の新しいたい焼き専門店、埼玉西武ライオンズグッズの販売開始など、地域が誇るポジティブな話題が満載。からっ風太郎とねぎ坊主が、地元愛あふれるあるあるネタと掛け合いで、夏らしい明るい雰囲気を届けます。フルーツ王国埼玉の秘密にも迫ります。</description>
+      
+      
       
       
       
@@ -483,7 +575,11 @@
       
       
       
+      
+      
       <pubDate>Sun, 02 Aug 2026 20:36:21 +0000</pubDate>
+      
+      
       
       
       
@@ -501,11 +597,15 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260802.mp3" length="3609121" type="audio/mpeg"/>
       
       
       
       
+      
+    
     
     
     
@@ -519,7 +619,11 @@
     
     
     
+    
+    
     <item>
+      
+      
       
       
       
@@ -541,7 +645,11 @@
       
       
       
+      
+      
       <description>8月の群馬・埼玉は話題が盛りだくさん。日航事故の慰霊を守る人たちの思い、そして尾瀬国立公園の新しい試み、さらには埼玉西武ライオンズの熱い試合までをご紹介。群馬推しのからっ風太郎と埼玉推しのねぎ坊主が、地元の夏の出来事をゆるく掛け合い。夏の群馬・埼玉の輝きと、人々の想いが詰まった1話です。</description>
+      
+      
       
       
       
@@ -563,7 +671,11 @@
       
       
       
+      
+      
       <pubDate>Sat, 01 Aug 2026 20:34:01 +0000</pubDate>
+      
+      
       
       
       
@@ -585,12 +697,16 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260801.mp3" length="3330760" type="audio/mpeg"/>
       
       
       
       
       
+      
+    
     
     
     
@@ -607,7 +723,11 @@
     
     
     
+    
+    
     <item>
+      
+      
       
       
       
@@ -633,7 +753,11 @@
       
       
       
+      
+      
       <description>7月31日放送分。群馬の埴輪がトレカになった話題から、埼玉の狭山市入間川七夕まつりの魅力、桐生が岡動物園のレッサーパンダ誕生、群馬・埼玉の定番グルメ、そして心温まる地域ネタまで、盛りだくさんの内容をお届けします。からっ風太郎とねぎ坊主の掛け合いで、群馬推し・埼玉推しそれぞれの視点から地域の魅力を紹介。8月を目前に控えた両県の楽しい話題ばかりです。</description>
+      
+      
       
       
       
@@ -659,7 +783,11 @@
       
       
       
+      
+      
       <pubDate>Fri, 31 Jul 2026 20:50:01 +0000</pubDate>
+      
+      
       
       
       
@@ -685,6 +813,8 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260731.mp3" length="5719815" type="audio/mpeg"/>
       
       
@@ -692,6 +822,8 @@
       
       
       
+      
+    
     
     
     
@@ -711,7 +843,11 @@
     
     
     
+    
+    
     <item>
+      
+      
       
       
       
@@ -741,7 +877,11 @@
       
       
       
+      
+      
       <description>群馬県が副首都指定に名乗りを上げた話題をキャッチ。山本知事の「首都代替の地理的条件を備えている」発言に、からっ風太郎とねぎ坊主が群馬の魅力と埼玉との違いを交えて盛り上げます。さらに群馬県内で熊対策に当たるクマゲキチームのメンバーが猟銃免許試験に挑戦する話も紹介。群馬の本気度と埼玉の反論、そして方言あるあるネタで笑いたっぷりの一話です。</description>
+      
+      
       
       
       
@@ -771,7 +911,11 @@
       
       
       
+      
+      
       <pubDate>Thu, 30 Jul 2026 20:49:00 +0000</pubDate>
+      
+      
       
       
       
@@ -801,6 +945,8 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260730.mp3" length="5015136" type="audio/mpeg"/>
       
       
@@ -809,6 +955,8 @@
       
       
       
+      
+    
     
     
     
@@ -831,7 +979,11 @@
     
     
     
+    
+    
     <item>
+      
+      
       
       
       
@@ -865,7 +1017,11 @@
       
       
       
+      
+      
       <description>今回は群馬の熱い話題で盛り上がり！布袋さんが出身地・高崎市で活動45周年記念フェスを初主催し、1万8000人を熱狂させたニュースに、からっ風太郎とねぎ坊主が大興奮。さらに、創部初の夏3連覇を達成した健大高崎野球部の甲子園出場報告も紹介します。埼玉からは、めんたいパーク川島の新スポット情報も登場。ローカルスターの成功と地域の誇りが詰まった、リスナーも一緒に喜びたくなる1話です。群馬推しと埼玉推しの2人の掛け合いも必聴。</description>
+      
+      
       
       
       
@@ -899,7 +1055,11 @@
       
       
       
+      
+      
       <pubDate>Wed, 29 Jul 2026 20:38:18 +0000</pubDate>
+      
+      
       
       
       
@@ -933,6 +1093,8 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260729.mp3" length="4548275" type="audio/mpeg"/>
       
       
@@ -942,6 +1104,8 @@
       
       
       
+      
+    
     
     
     
@@ -967,7 +1131,11 @@
     
     
     
+    
+    
     <item>
+      
+      
       
       
       
@@ -1005,7 +1173,11 @@
       
       
       
+      
+      
       <description>群馬の桐生市にある工場が、中国・上海のバイヤーとテレビ局の視察を受けたというニュースをお届けします。日本のものづくり技術が海外で注目されるというワクワクする話題を、からっ風太郎とねぎ坊主の二人が掛け合いで紹介。さらに群馬と埼玉のあるあるネタ、そして夏本番のこの季節ならではの過ごし方トークも交えて、楽しくお送りします。地域の産業を身近に感じて、地元への誇りがアップする一話です。</description>
+      
+      
       
       
       
@@ -1043,7 +1215,11 @@
       
       
       
+      
+      
       <pubDate>Tue, 28 Jul 2026 20:50:59 +0000</pubDate>
+      
+      
       
       
       
@@ -1081,6 +1257,8 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260728.mp3" length="4625180" type="audio/mpeg"/>
       
       
@@ -1091,6 +1269,8 @@
       
       
       
+      
+    
     
     
     
@@ -1119,7 +1299,11 @@
     
     
     
+    
+    
     <item>
+      
+      
       
       
       
@@ -1161,7 +1345,11 @@
       
       
       
+      
+      
       <description>真夏の群馬・高崎市で、大型商業施設が共同で実施する打ち水イベントにスポットを当てます。暑い夏を工夫して乗り越える地域の取り組みに注目。一方、群馬県がタクシー業界で全国トップクラスの女性比率を誇り、柔軟な働き方で採用を進めているというグッドニュースも紹介。からっ風太郎とねぎ坊主の2人が、夏の暑さと仕事の工夫について掛け合いながら、地域の頑張りを楽しく紹介します。</description>
+      
+      
       
       
       
@@ -1203,7 +1391,11 @@
       
       
       
+      
+      
       <pubDate>Mon, 27 Jul 2026 20:55:40 +0000</pubDate>
+      
+      
       
       
       
@@ -1245,6 +1437,8 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260727.mp3" length="3892497" type="audio/mpeg"/>
       
       
@@ -1256,6 +1450,8 @@
       
       
       
+      
+    
     
     
     
@@ -1287,7 +1483,11 @@
     
     
     
+    
+    
     <item>
+      
+      
       
       
       
@@ -1333,7 +1533,11 @@
       
       
       
+      
+      
       <description>群馬の健大高崎が夏の大会で3連覇を達成、埼玉では花咲徳栄が優勝と、両県で高校野球の熱い戦いが繰り広げられました。からっ風太郎とねぎ坊主の2人が、地元愛溢れる視点でそれぞれの県の試合結果を熱く語り合います。スポーツの興奮、地域への思い、そして2人のツッコミ・ボケの掛け合いで、リスナーも思わず応援したくなる1話です。</description>
+      
+      
       
       
       
@@ -1379,7 +1583,11 @@
       
       
       
+      
+      
       <pubDate>Sun, 26 Jul 2026 20:38:38 +0000</pubDate>
+      
+      
       
       
       
@@ -1425,6 +1633,8 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260726.mp3" length="4696651" type="audio/mpeg"/>
       
       
@@ -1437,6 +1647,8 @@
       
       
       
+      
+    
     
     
     
@@ -1471,7 +1683,11 @@
     
     
     
+    
+    
     <item>
+      
+      
       
       
       
@@ -1521,7 +1737,11 @@
       
       
       
+      
+      
       <description>7月25日は埼玉で大雨警報が発表される中、群馬でも工場事故や強盗事件など立て続けにトラブルが発生。からっ風太郎とねぎ坊主が、地元の危機管理情報を軽妙に掛け合いながら、季節の移ろいと地元愛を語り合う。大泉町で相次ぐニュースへのツッコミ、そして群馬と埼玉の天候の違いを背景に、2人の息の合った漫才のようなやり取りが光る一話。夏の豪雨シーズンに听き手も気になる、両県の今を伝える。</description>
+      
+      
       
       
       
@@ -1571,7 +1791,11 @@
       
       
       
+      
+      
       <pubDate>Sat, 25 Jul 2026 20:33:14 +0000</pubDate>
+      
+      
       
       
       
@@ -1621,6 +1845,8 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260725.mp3" length="3550607" type="audio/mpeg"/>
       
       
@@ -1634,6 +1860,8 @@
       
       
       
+      
+    
     
     
     
@@ -1671,7 +1899,11 @@
     
     
     
+    
+    
     <item>
+      
+      
       
       
       
@@ -1725,7 +1957,11 @@
       
       
       
+      
+      
       <description>今回は、群馬と埼玉を襲う極端な天気が話題。群馬では五日連続猛暑日、伊勢崎で38.8度を観測する一方で、埼玉では大雨警報が発表される異常気象。からっ風太郎とねぎ坊主が、自分たちの県の天気予報に大喜びしたり呆れたり。「群馬は熱地獄、埼玉は水の国」と称される両県の気候の違いを、ボケとツッコミで描く。夏本番の群馬・埼玉を舞台にした、天気で盛り上がるラジオです。</description>
+      
+      
       
       
       
@@ -1779,7 +2015,11 @@
       
       
       
+      
+      
       <pubDate>Fri, 24 Jul 2026 20:51:47 +0000</pubDate>
+      
+      
       
       
       
@@ -1833,6 +2073,8 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260724.mp3" length="2958777" type="audio/mpeg"/>
       
       
@@ -1847,6 +2089,8 @@
       
       
       
+      
+    
     
     
     
@@ -1861,6 +2105,8 @@
     
     
     </item>
+    
+    
     
     
     
@@ -1916,7 +2162,11 @@
       
       
       
+      
+      
       <title>【特別編】群馬愛から誕生！GPSゲーム『群馬モンスターズ』公開スペシャル</title>
+      
+      
       
       
       
@@ -1976,9 +2226,13 @@
       
       
       
+      
+      
       <itunes:summary>群馬県東吾妻町のチームグンマサイタマゲームが、GPS連動ブラウザゲーム『群馬モンスターズ』のベータ版を公開！からっ風太郎とねぎ坊主が、このゲームの魅力を語り合います。スマホで現実の街を歩きながら、群馬の食・温泉・山・川・歴史・文化をモチーフにした全108体のモンスターに出会える新しい地域体験型ゲーム。アプリのインストール不要で、ブラウザだけで無料プレイ可能。番組ページの概要欄のリンクからすぐ遊べます。
 
 ▶ ゲームはこちら（ブラウザですぐ遊べます）: https://gunma-monsters.vercel.app</itunes:summary>
+      
+      
       
       
       
@@ -2036,7 +2290,11 @@
       
       
       
+      
+      
       <guid>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_special-gunma-monsters.mp3</guid>
+      
+      
       
       
       
@@ -2080,6 +2338,8 @@
       
       
       
+      
+    
     
     
     
@@ -2123,7 +2383,11 @@
     
     
     
+    
+    
     <item>
+      
+      
       
       
       
@@ -2185,7 +2449,11 @@
       
       
       
+      
+      
       <description>7月も終盤、群馬・埼玉は連日猛暑に見舞われています。今回は群馬県内で39.8度を記録した異常な高気温について、からっ風太郎とねぎ坊主が熱くトーク。さらに土用の丑の日を前にした県内のウナギ商戦が活況を呈していることや、スズラン前橋店での『ふしぎな水族園』イベントなど、夏を満喫するネタで盛り上がります。2人の掛け合いから、夏の群馬・埼玉の熱い雰囲気が伝わる、この季節ならではの一話です。</description>
+      
+      
       
       
       
@@ -2247,7 +2515,11 @@
       
       
       
+      
+      
       <pubDate>Thu, 23 Jul 2026 23:25:27 +0000</pubDate>
+      
+      
       
       
       
@@ -2309,6 +2581,8 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260723.mp3" length="2983436" type="audio/mpeg"/>
       
       
@@ -2325,6 +2599,8 @@
       
       
       
+      
+    
     
     
     
@@ -2371,7 +2647,11 @@
     
     
     
+    
+    
     <item>
+      
+      
       
       
       
@@ -2437,7 +2717,11 @@
       
       
       
+      
+      
       <description>今日も暑い！群馬・埼玉両県で猛暑日を記録。桐生では37.3℃を超える危険な暑さが続く中、何かと話題の群馬・館林のマスコット『たてポン』に新しいポロシャツが登場！商標問題で波乱万丈な展開もあったようだが、グッズ販売は順調な様子。一方、埼玉ではコアラ2匹が新しくやってきて話題沸騰。猛暑とローカルニュースが彩る、からっ風太郎とねぎ坊主の掛け合いをお楽しみください。熱さ対策と地元愛がぎゅっと詰まった1話です。</description>
+      
+      
       
       
       
@@ -2503,7 +2787,11 @@
       
       
       
+      
+      
       <pubDate>Tue, 14 Jul 2026 20:45:58 +0000</pubDate>
+      
+      
       
       
       
@@ -2569,6 +2857,8 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260715.mp3" length="4390287" type="audio/mpeg"/>
       
       
@@ -2586,6 +2876,8 @@
       
       
       
+      
+    
     
     
     
@@ -2635,7 +2927,11 @@
     
     
     
+    
+    
     <item>
+      
+      
       
       
       
@@ -2705,7 +3001,11 @@
       
       
       
+      
+      
       <description>群馬に上陸した北海道発祥のラーメン店、熊谷の猛暑日予想、そして話題沸騰中の群馬パスポート！今回は食べて、笑えるグルメネタから、埼玉の熱さ（気温的に）まで、夏の関東を全力で駆け抜けます。からっ風太郎の群馬推しが冴え渡り、ねぎ坊主の埼玉ツッコミも炸裂。高カロリーなラーメン談義から熱中症対策まで、笑いと情報が融合したローカルラジオの真骨頂。群馬と埼玉、どちらが本当に熱いのか問い直す1話です。</description>
+      
+      
       
       
       
@@ -2775,7 +3075,11 @@
       
       
       
+      
+      
       <pubDate>Mon, 13 Jul 2026 22:59:07 +0000</pubDate>
+      
+      
       
       
       
@@ -2845,6 +3149,8 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260713.mp3" length="4310457" type="audio/mpeg"/>
       
       
@@ -2863,6 +3169,8 @@
       
       
       
+      
+    
     
     
     
@@ -2915,7 +3223,11 @@
     
     
     
+    
+    
     <item>
+      
+      
       
       
       
@@ -2989,7 +3301,11 @@
       
       
       
+      
+      
       <description>どうも、からっ風太郎です。 / 相方のねぎ坊主です。</description>
+      
+      
       
       
       
@@ -3063,7 +3379,11 @@
       
       
       
+      
+      
       <guid>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260712.mp3</guid>
+      
+      
       
       
       
@@ -3119,6 +3439,8 @@
       
       
       
+      
+    
     
     
     
@@ -3174,7 +3496,11 @@
     
     
     
+    
+    
     <item>
+      
+      
       
       
       
@@ -3252,7 +3578,11 @@
       
       
       
+      
+      
       <description>こんばんは！ラジオ・グンマサイタマのからっ風太郎です / 相方のねぎ坊主です。2026年7月11日の放送をお送りします</description>
+      
+      
       
       
       
@@ -3330,7 +3660,11 @@
       
       
       
+      
+      
       <guid>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3</guid>
+      
+      
       
       
       
@@ -3389,6 +3723,8 @@
       
       
       
+      
+    
     
     
     
@@ -3409,6 +3745,8 @@
     
     
     </item>
+    
+    
     
     
     
@@ -3488,7 +3826,11 @@
       
       
       
+      
+      
       <title>ラジオ・グンマサイタマ 2026/07/11</title>
+      
+      
       
       
       
@@ -3570,7 +3912,11 @@
       
       
       
+      
+      
       <pubDate>Sat, 11 Jul 2026 08:13:02 +0000</pubDate>
+      
+      
       
       
       
@@ -3652,6 +3998,8 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3" length="4782751" type="audio/mpeg"/>
       
       
@@ -3673,6 +4021,8 @@
       
       
       
+      
+    
     
     
     
@@ -3694,6 +4044,8 @@
     
     
     </item>
+    
+    
     
     
     
@@ -3777,7 +4129,11 @@
       
       
       
+      
+      
       <title>ラジオ・グンマサイタマ 2026/07/11</title>
+      
+      
       
       
       
@@ -3863,7 +4219,11 @@
       
       
       
+      
+      
       <pubDate>Sat, 11 Jul 2026 05:19:36 +0000</pubDate>
+      
+      
       
       
       
@@ -3949,6 +4309,8 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3" length="5135926" type="audio/mpeg"/>
       
       
@@ -3971,6 +4333,8 @@
       
       
       
+      
+    
     
     
     
@@ -3993,6 +4357,8 @@
     
     
     </item>
+    
+    
     
     
     
@@ -4080,7 +4446,11 @@
       
       
       
+      
+      
       <title>ラジオ・グンマサイタマ 2026/07/11</title>
+      
+      
       
       
       
@@ -4170,7 +4540,11 @@
       
       
       
+      
+      
       <pubDate>Sat, 11 Jul 2026 04:52:44 +0000</pubDate>
+      
+      
       
       
       
@@ -4260,6 +4634,8 @@
       
       
       
+      
+      
       <enclosure url="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes/episode_20260711.mp3" length="5291407" type="audio/mpeg"/>
       
       
@@ -4283,6 +4659,8 @@
       
       
       
+      
+    
     
     
     
@@ -4328,8 +4706,10 @@
     
     
     
+    
   
   
+    
     
     
     
@@ -4351,6 +4731,8 @@
     
     
     <itunes:image href="https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/cover.png"/>
+    
+    
     
     
     
@@ -4432,7 +4814,11 @@
       
       
       
+      
+      
       <url>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/cover.png</url>
+      
+      
       
       
       
@@ -4514,6 +4900,8 @@
       
       
       
+      
+      
       <link>https://5ybxfsckz1vzcfwz.public.blob.vercel-storage.com/episodes</link>
       
       
@@ -4535,6 +4923,8 @@
       
       
       
+      
+    
     
     
     
@@ -4556,6 +4946,8 @@
     
     
     </image>
+    
+    
     
     
     
@@ -4637,7 +5029,11 @@
       
       
       
+      
+      
       <itunes:name>チームグンマサイタマゲーム</itunes:name>
+      
+      
       
       
       
@@ -4699,6 +5095,8 @@
       
       
       
+      
+    
     
     
     
@@ -4720,6 +5118,8 @@
     
     
     </itunes:owner>
+    
+    
     
     
     
@@ -4801,6 +5201,8 @@
     
     
     
+    
+    
     <itunes:category text="Leisure"/>
     
     
@@ -4822,6 +5224,8 @@
     
     
     
+    
+  
   
   
   
@@ -4865,6 +5269,8 @@
   
   
   
+  
+
 
 
 
